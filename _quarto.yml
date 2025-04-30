@@ -11,6 +11,16 @@ website:
       - about.qmd
       - href: resources.qmd
         text: Resources
+    right: 
+      - icon: github
+        href: https://github.com/rroggenk/ 
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/rroggenk/ 
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:rroggenk@calpoly.edu 
+        aria-label: Email
 
 format:
   html:
