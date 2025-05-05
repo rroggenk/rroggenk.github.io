@@ -8,9 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - href: resources.qmd
-        text: Resources
+      - href: 541portfolio.qmd
+        text: STAT 541 Portfolio
     right: 
       - icon: github
         href: https://github.com/rroggenk/ 

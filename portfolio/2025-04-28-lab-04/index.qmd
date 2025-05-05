@@ -1,0 +1,17 @@
+---
+title: "Lab 4: Interactive Dashboard"
+description: "Transforming a Static Dashboard into an Interactive Dashboard"
+image: preview-image.png
+author: "Rachel Roggenkemper"
+date: 04-28-2025
+categories: [Quarto, R, Dashboards]
+format: html
+---
+
+<center>
+
+<iframe src="https://rroggenk.shinyapps.io/lab-4/" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+
+</iframe>
+
+</center>

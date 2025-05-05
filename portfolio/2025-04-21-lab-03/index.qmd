@@ -1,0 +1,17 @@
+---
+title: "Lab 3: Static Dashboard"
+description: "Transforming a Report into a Dashboard"
+image: preview-image.png
+author: "Rachel Roggenkemper"
+date: 04-21-2025
+categories: [Quarto, R, Dashboards]
+format: html
+---
+
+<center>
+
+<iframe src="https://rroggenk.quarto.pub/lab3-dashboard/lab-3.html" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+
+</iframe>
+
+</center>
