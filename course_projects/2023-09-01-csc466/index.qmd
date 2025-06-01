@@ -1,0 +1,14 @@
+---
+title: "CSC 466: Knowledge Discovery from Data"
+description: "Overview of modern knowledge discovery from data (KDD) methods and technologies. Topics in data mining (association rules mining, classification, clustering), information retrieval, web mining. Emphasis on use of KDD techniques in modern software applications."
+author: "Rachel Roggenkemper"
+date: "09-01-2023"
+categories: [Computer Science, Python]
+image: preview-image.jpeg
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---

@@ -1,0 +1,15 @@
+---
+title: "DATA 403: Data Science Projects Laboratory"
+description: "Projects involving comparison of predictive and interpretable regression models, implementing linear classifiers with gradient descent, implementing neural networks from scratch, and deep learning."
+author: "Rachel Roggenkemper"
+date: "09-01-2023"
+categories: [Data Science, Python, R]
+image: preview-image.jpeg
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+

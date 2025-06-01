@@ -1,0 +1,15 @@
+---
+title: "DATA 301: Introduction to Data Science"
+description: "Introduction to the field of data science and the workflow of a data scientist. Types of data (tabular, textual, sparse, structured, temporal, geospatial), basic data management and manipulation, simple summaries, and visualization."
+author: "Rachel Roggenkemper"
+date: "09-01-2022"
+categories: [Data Science, Python]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+

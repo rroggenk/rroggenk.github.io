@@ -1,0 +1,14 @@
+---
+title: "STAT 423: Design and Analysis of Experiments II"
+description: "2k factorial designs, 3k factorial designs, balanced and partially balanced incomplete block designs, nested designs, split-plot designs, response surface methodology, confounding, repeated measures, and other design approaches."
+author: "Rachel Roggenkemper"
+date: "04-01-2023"
+categories: [Statistics, JMP]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---

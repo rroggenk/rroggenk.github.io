@@ -13,7 +13,7 @@ These slides were part of my public master’s thesis presentation. They introdu
 
 <iframe src="nhg_ci/ThesisPresentation.pdf" width="100%" height="600px" style="border: none;">
 
-<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+<p>Your browser does not support PDFs. <a href="nhg_ci/ThesisPresentation.pdf">Download the PDF</a>.</p>
 
 </iframe>
 
@@ -23,7 +23,7 @@ This poster summarized the research Hannah and I conducted during the FROST summ
 
 <iframe src="nhg_ci/Frost_SURP_Discrete_CI_2025_Poster.pdf" width="100%" height="750px" style="border: none;">
 
-<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+<p>Your browser does not support PDFs. <a href="nhg_ci/Frost_SURP_Discrete_CI_2025_Poster.pdf">Download the PDF</a>.</p>
 
 </iframe>
 
@@ -33,6 +33,6 @@ These slides accompanied the joint presentation Hannah and I gave at the conclus
 
 <iframe src="nhg_ci/Frost_SURP_Discrete_CI_2025_Slides.pdf" width="100%" height="600px" style="border: none;">
 
-<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+<p>Your browser does not support PDFs. <a href="nhg_ci/Frost_SURP_Discrete_CI_2025_Slides.pdf">Download the PDF</a>.</p>
 
 </iframe>

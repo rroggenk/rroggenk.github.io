@@ -1,5 +1,14 @@
 ---
-title: "course_projects"
-format: html
+title: "Course Projects"
+listing: 
+  contents: course_projects # this name must match the name of the folder you created in step #1; here, all Quarto docs in the `posts` directory will be included on your listing page
+  type: grid # or `default` or `table`; each type has its own set of yaml options to include
+  sort: "date desc" # can also sort on more than one field
+  categories: true # allows you to sort posts by assigned categories 
 ---
 
+This section showcases a range of projects completed throughout my undergraduate and graduate coursework in statistics, data science, and computer science. Each post corresponds to a specific course and highlights hands-on work applying analytical methods, computational tools, and statistical theory to real-world data problems.
+
+Projects span topics such as machine learning, generalized linear models, survival analysis, experimental design, stochastic processes, distributed computing, and statistics education. Whether developing predictive models, analyzing sequential processes, or building interactive reports, each project reflects the applied and interdisciplinary focus of my academic experience.
+
+Click any course below to explore the work in more detail.

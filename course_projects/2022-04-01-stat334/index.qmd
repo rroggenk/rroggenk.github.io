@@ -1,0 +1,15 @@
+---
+title: "STAT 334: Applied Linear Models"
+description: "Linear models in algebraic and matrix form, diagnostics, transformations, polynomial models, categorical predictors, model selection, correlated errors, logistic regression."
+author: "Rachel Roggenkemper"
+date: "04-01-2022"
+categories: [Statistics, R]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+

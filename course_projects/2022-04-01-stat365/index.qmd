@@ -1,0 +1,15 @@
+---
+title: "STAT 365: Statistical Communication"
+description: "Written communication of statistical ideas and content. Analyze data using appropriate methods from previous statistics courses. Writing technical reports with appropriate graphs and tables. Strategies to discern relevant and necessary information to communicate data, ideas, and results to different audiences."
+author: "Rachel Roggenkemper"
+date: "04-01-2022"
+categories: [Statistics, R, Excel]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+

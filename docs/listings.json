@@ -11,5 +11,18 @@
       "/541portfolio/2025-05-27-lab-08/index.html",
       "/541portfolio/2025-06-02-lab-09/index.html"
     ]
+  },
+  {
+    "listing": "/course_projects.html",
+    "items": [
+      "/course_projects/2023-09-01-data403/index.html",
+      "/course_projects/2023-09-01-csc466/index.html",
+      "/course_projects/2023-04-01-stat423/index.html",
+      "/course_projects/2023-01-01-stat417/index.html",
+      "/course_projects/2022-09-01-data301/index.html",
+      "/course_projects/2022-04-01-stat365/index.html",
+      "/course_projects/2022-04-01-stat334/index.html",
+      "/course_projects/2022-01-01-stat323/index.html"
+    ]
   }
 ]

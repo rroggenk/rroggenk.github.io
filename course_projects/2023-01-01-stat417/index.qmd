@@ -1,0 +1,15 @@
+---
+title: "STAT 417: Survival Analysis Methods"
+description: "Parametric and nonparametric methods for analyzing survival data. Topics include Kaplan-Meier and Nelson-Aalen estimates, Cox regression models, accelerated failure time models. Use of statistical software to implement methods throughout course."
+author: "Rachel Roggenkemper"
+date: "01-01-2023"
+categories: [Statistics, Minitab]
+image: preview-image.jpg
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+

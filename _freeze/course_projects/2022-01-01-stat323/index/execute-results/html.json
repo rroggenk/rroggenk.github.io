@@ -1,0 +1,15 @@
+{
+  "hash": "906b65b57aac5be63b4078267a21cf18",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"STAT 323: Design and Analysis of Experiments I\"\ndescription: \"Principles, construction and analysis of experimental designs. Completely randomized, randomized complete block, Latin squares, Graeco Latin squares, factorial, and nested designs. Fixed and random effects, expected mean squares, multiple comparisons, and analysis of covariance.\"\nauthor: \"Rachel Roggenkemper\"\ndate: \"01-01-2022\"\ncategories: [Statistics, JMP]\nimage: preview-image.jpg\nformat: html\nembed-resources: true\neditor: source\nexecute: \n  echo: true\n  warning: false\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n# <iframe src=\"stat323_finalproject.pdf\" width=\"100%\" height=\"800px\" style=\"border: none;\">\n# \n# <p>Your browser does not support PDFs. <a href=\"stat323_finalproject.pdf\">Download the PDF</a>.</p>\n# \n# </iframe>\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
