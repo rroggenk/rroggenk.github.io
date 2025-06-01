@@ -1,0 +1,400 @@
+---
+title: "Lab 2: Advanced Data Visualization"
+description: "Identifying Bad Visualizations and Broad Visualization Improvement"
+author: "Rachel Roggenkemper"
+date: "04-14-2025"
+categories: [Quarto, R]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+# Instructions
+
+**Create a Quarto file for ALL Lab 2 (no separate files for Parts 1 and 2).**
+
+-   Make sure your final file is carefully formatted, so that each analysis is clear and concise.
+-   Be sure your knitted `.html` file shows **all** your source code, including any function definitions.
+
+```{r}
+#| label: install-packages
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(here)
+library(scales)
+library(plotly)
+library(leaflet)
+library(maps)
+library(sf)
+library(geojsonio)
+```
+
+# Part One: Identifying Bad Visualizations
+
+If you happen to be bored and looking for a sensible chuckle, you should check out these [Bad Visualisations](https://badvisualisations.tumblr.com/). Looking through these is also a good exercise in cataloging what makes a visualization good or bad.
+
+## Dissecting a Bad Visualization
+
+Below is an example of a less-than-ideal visualization from the collection linked above. It comes to us from data provided for the [Wellcome Global Monitor 2018 report](https://wellcome.ac.uk/reports/wellcome-global-monitor/2018) by the Gallup World Poll:
+
+![](image/bad-wellcome-graph.jpg)
+
+1.  While there are certainly issues with this image, do your best to tell the story of this graph in words. That is, what is this graph telling you? What do you think the authors meant to convey with it?
+
+    This graph tells the story of the world regions and their level of belief that vaccines are safe by each country in that region. It is trying to show the regions that have the greatest and least belief that vaccines are safe, and shows within that region, which countries have the greatest and least belief in vaccines.
+
+    The authors mean to convey the region's overall belief in vaccines, in addition to specific countries in that region. With the inclusion of the regional medians, we can compare the regions against each other. We can also compare the countries in that region against their regional median.
+
+    In terms of regional medians, we learn that Asia has the highest belief in vaccines while the Former Soviet Union has the lowest belief in vaccines.
+
+2.  List the variables that appear to be displayed in this visualization. *Hint: Variables refer to columns in the data.*
+
+    -   Global region
+    -   Country
+    -   Percentage of people who believe in vaccines
+
+3.  Now that you're versed in the grammar of graphics (e.g., `ggplot`), list the *aesthetics* used and which *variables* are mapped to each.
+
+    -   x-axis: percentage of people who believe in vaccines
+
+    -   y-axis: country
+
+    -   color: region
+
+    -   facet: region
+
+    -   text labels: all regions and some countries (low and high within regions)
+
+    -   vertical lines: regional medians
+
+4.  What type of graph would you call this? Meaning, what `geom` would you use to produce this plot?
+
+    `geom_point()`
+
+5.  Provide at least four problems or changes that would improve this graph. *Please format your changes as bullet points!*
+
+-   Fix the layout (y-axis), right now it doesn't provide useful information about the countries so remove the y-axis
+-   Remove the legend, it is just providing repeat information
+-   Provide some consistency along the country labels, right now it seems like they are being randomly labeled within each region
+-   Change the "%" in the title to "Percentage"
+-   Add "%" to the x-axis labels
+
+## Improving the Bad Visualization
+
+The data for the Welcome Global Monitor 2018 report can be downloaded at the following site: [https://wellcome.ac.uk/reports/wellcome-global-monitor/2018](https://wellcome.org/sites/default/files/wgm2018-dataset-crosstabs-all-countries.xlsx)
+
+<!-- at the "Dataset and crosstabs for all countries" link on the right side of the page-->
+
+There are two worksheets in the downloaded dataset file. You may need to read them in separately, but you may also just use one if it suffices.
+
+```{r}
+#| label: read-in-wellcome-data
+
+# Loading in full WGM dataset from Sheet 2 
+wgm2018_full <- read_xlsx(
+  here("data", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
+  sheet = 2)
+
+# Extract raw country information from Sheet 3, cell C2 (relates to WP5)
+# Clean and reshape country information into WP5 column and country name column 
+country_names <- read_xlsx(
+  here("data", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
+  sheet = 3,
+  range = "C2:C2",
+  col_names = "countries") %>%
+  mutate(num_country = str_split(countries, pattern = ",")) %>%
+  unnest(num_country) %>%
+  mutate(
+    WP5 = as.numeric(
+      str_split(num_country, pattern = "=", simplify = TRUE)[, 1]
+      ),
+    country = str_split(num_country, pattern = "=", simplify = TRUE)[, 2]
+    ) %>%
+  select(WP5, country) %>%
+  filter(!is.na(WP5))
+
+# Extra raw region information from Sheet 3, cell C58 (relates to Regions_Report)
+# Clean and reshape region information into Regions_Report column and region name column 
+region_names <- read_xlsx(
+  here("data", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
+  sheet = 3,
+  range = "C58",
+  col_names = "regions") %>%
+  mutate(num_region = str_split(regions, ",")) %>%
+  unnest(num_region) %>%
+  mutate(
+    Regions_Report = as.numeric(str_split(num_region, "=", simplify = TRUE)[,1]),
+    region = str_split(num_region, "=", simplify = TRUE)[,2]
+    ) %>%
+  select(Regions_Report, region) %>%
+  filter(!is.na(Regions_Report))
+
+# Join country and region information with full WGM data
+wgm2018_full <- wgm2018_full %>%
+  left_join(country_names, by = "WP5") %>%
+  left_join(region_names, by = "Regions_Report")
+
+# Create global region variables (collapsed grouping)
+wgm2018_full <- wgm2018_full %>%
+  mutate(
+    global_region = case_when(
+      country %in% c("Estonia", "Latvia", "Lithuania") ~ "Former Soviet Union",
+      country %in%
+        c("Bulgaria", "Czech Republic", "Hungary",
+          "Poland", "Romania", "Slovakia") ~ "Europe",
+      region %in% c("Middle East", "North Africa") ~
+        "Middle East and North Africa",
+      region %in% c("Central Asia", "Eastern Europe")  ~ "Former Soviet Union",
+      str_detect(region, "America") ~ "Americas",
+      str_detect(region, "Africa") ~ "Africa",
+      str_detect(region, "Asia") | region == "Aus/NZ" ~ "Asia",
+      TRUE ~ "Europe"   # include "Not Assigned"
+    )
+  )
+```
+
+6.  Improve the visualization above by either re-creating it with the issues you identified fixed OR by creating a new visualization that you believe tells the same story better.
+
+```{r}
+#| label: new-and-improved-visualization
+#| warning: false
+
+vaccine_data <- wgm2018_full %>%
+  select(global_region, country, Q25) %>%
+  mutate(vaccine_safe = case_when(
+    Q25 %in% 1:2 ~ 1,  # strongly/somewhat agree
+    Q25 %in% 3:5 ~ 0,  # neutral or disagree
+    TRUE ~ NA_real_   # don't know / refused
+    )) %>%
+  # remove don't know / refused
+  filter(vaccine_safe <= 1) %>%   
+  group_by(country, global_region) %>%
+  # country averages
+  summarise(vaccine_safe = mean(vaccine_safe)) %>%
+  group_by(global_region) %>%
+  # regional medians
+  mutate(
+    region_median = median(vaccine_safe),
+    global_region = fct_reorder(as.factor(global_region), desc(region_median)),
+    min_max = case_when(
+      vaccine_safe == max(vaccine_safe) ~ country,
+      vaccine_safe == min(vaccine_safe) ~ country)
+  )  
+  
+vaccine_data %>%
+  ggplot(aes(y = reorder(global_region, region_median), 
+             x = vaccine_safe, 
+             color = global_region)) +
+    geom_point(aes(alpha = 0.78, 
+                   size = 3)) +
+    geom_errorbar(aes(y = global_region, 
+                      xmax = region_median, 
+                      xmin = region_median),
+                  size = 0.5, 
+                  linetype = "solid", 
+                  width = 1, 
+                  color = "black") +
+    scale_color_manual(values = c("skyblue1", "seagreen4", "yellow2",
+                                  "orangered4", "salmon1", "dodgerblue4")) +
+    geom_linerange(aes(xmin = region_median, 
+                       xmax = region_median,
+                       group = global_region)) +
+    labs(x = NULL, 
+         y = NULL,
+         title = "Percentage of People who Believe Vaccines are Safe,
+         \nby Country and Global Region") +
+    theme_bw() +
+    theme(legend.position = "none",
+          panel.grid.major.y = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.text.y = element_blank(),
+          plot.title = element_text(face = 'bold')) +
+    scale_x_continuous(breaks = seq(0.2, 1, by = 0.1),
+                       labels = label_percent(),
+                       sec.axis = dup_axis()) +
+    guides(color = FALSE) +
+    geom_text(aes(y = global_region, x = 0.2, label = global_region), 
+              vjust = -1,
+              hjust = 0,
+              size = 4,
+              fontface = "bold") +
+    geom_text(aes(label = min_max),
+                    vjust = 0,
+                    hjust = 0,
+                    size = 3,
+                    color = "gray18") +
+    annotate(geom = "text",
+             x = 0.865, 
+             y = "Asia", 
+             label = "Regional Median",
+             color = "black", 
+             size = 2.5,
+             hjust = 0,
+             vjust = -3)
+```
+
+# Part Two: Broad Visualization Improvement
+
+The full Wellcome Global Monitor 2018 report can be found here: <https://wellcome.ac.uk/sites/default/files/wellcome-global-monitor-2018.pdf>. Surprisingly, the visualization above does not appear in the report despite the citation in the bottom corner of the image!
+
+## Second Data Visualization Improvement
+
+**For this second plot, you must select a plot that uses maps so you can demonstrate your proficiency with the `leaflet` package!**
+
+7.  Select a data visualization in the report that you think could be improved. Be sure to cite both the page number and figure title. Do your best to tell the story of this graph in words. That is, what is this graph telling you? What do you think the authors meant to convey with it?
+
+![](image/chart2.14.png)
+
+Chart 2.14: Map of interest in knowing more about medicine, disease or health by country (page 39)
+
+This graph is telling the reader the percentage of interest of people who would like to know more about medicine, disease or health by country. The map is shaded using a different shade of green for based on the interest level of each country, a darker shade of green representing more interest.
+
+8.  List the variables that appear to be displayed in this visualization.
+
+The variables that appear to be displayed in this visualization are the countries and people in the country's interest level in whether they would like to know more about medicine, disease, or health.
+
+9.  Now that you're versed in the grammar of graphics (ggplot), list the aesthetics used and which variables are specified for each.
+
+I wouldn't use ggplot to remake this plot. I would use leaflet to map the people in the country's interest level in whether they would like to know more about medicine, disease, or health to their respective country in the map, shading it using a green color scale that represents the interest level of a country, a darker shade of green representing more interest.
+
+10. What type of graph would you call this?
+
+I would call this type of graph a choropleth map.
+
+11. List all of the problems or things you would improve about this graph.
+
+My main problem with this graph is the coloring. The graph just uses one color green, and the shades of green are very similar, so it's difficult to tell the differences between the countries. Thus, I would use a more diverse color palette to fix this issue. Something I would improve about this graph is add an interactive element so when you hover above the country, you can see the exact percentage of interest level.
+
+12. Improve the visualization above by either re-creating it with the issues you identified fixed OR by creating a new visualization that you believe tells the same story better.
+
+```{r}
+#| label: second-improved-visualization
+
+# Compiling interest in knowing more about medicine, disease or health data 
+health_data <- wgm2018_full %>%
+  select(country, Q7) %>%
+  filter(Q7 %in% c(1, 2)) %>%
+  mutate(conf = case_when(
+    Q7 == 2 ~ 0,
+    Q7 == 1 ~ 1)) %>%
+  group_by(country) %>%
+  summarise(average = mean(conf, na.rm = TRUE)) %>%
+  mutate(percentage = average * 100) %>%
+  select(country, percentage)
+
+
+# Load GeoJSON data of all countries
+world_geojson <- geojson_read("https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json", what = "sp")
+
+world_geojson <- world_geojson %>%
+  st_as_sf() %>%
+  rename(country = name)
+
+# Combining health data and GeoJSON data
+health_data_json <- world_geojson %>%
+  st_as_sf() %>%
+  left_join(health_data, by = "country") 
+
+# Leaflet Map
+pallatte <- colorNumeric("plasma", domain = health_data_json$percentage)
+
+leaflet(health_data_json) %>%
+  setView(lng = 0, lat = 0, zoom = 1) %>%
+  addPolygons(stroke = FALSE, 
+              smoothFactor = 0.2, 
+              fillOpacity = 1,
+              color = ~pallatte(percentage),
+              label = paste0(health_data_json$country, ": ", 
+                             round(health_data_json$percentage, 1), "%"),
+              highlightOptions = highlightOptions(weight = 5,
+                                                  color = "#000000",
+                                                  fillOpacity = 0.7)) %>%
+  addLegend(pallatte, 
+            values = ~percentage,
+            opacity = 0.8,
+            title = "Interest level (%)",
+            position = "bottomleft",
+            labFormat = labelFormat(suffix = "%")) %>%
+  addControl(html = "<div class='map-title'>Map of interest in learning more about medicine,<br>disease, or health by country</div>",
+             position = "topright")
+```
+
+## Third Data Visualization Improvement
+
+**For this third plot, you must use one of the other `ggplot2` extension packages mentioned this week (e.g., `gganimate`, `plotly`, `patchwork`, `cowplot`).**
+
+13. Select a data visualization in the report that you think could be improved. Be sure to cite both the page number and figure title. Do your best to tell the story of this graph in words. That is, what is this graph telling you? What do you think the authors meant to convey with it?
+
+![](image/chart5.4.png)
+
+Chart 5.4: Scatterplot exploring people’s perceptions of vaccine safety and vaccine effectiveness (page 112)
+
+This graph is telling the reader the relationship between people's perceptions of vaccine safety and vaccine effectiveness. It shows the percentage of a country's people that disagree that vaccines are safe with the percentage of them who disagree that vaccines are effective. I think the authors are trying to convey the relationship between these two variables, and how they change with one another, whcih is why they aded the yellow trend line. I think they are also trying to highlight the countries that have either an abnormally high level of disagreement of people who think vaccines are safe and vaccines are effective, which is why they have some countries labeled.
+
+14. List the variables that appear to be displayed in this visualization.
+
+The variables that appear to be displayed in this visualization are the countries, the percentage of people in the country's that disagree that vaccines are safe, and the percentage of people in the country's that disagree that vaccines are effective.
+
+15. Now that you're versed in the grammar of graphics (ggplot), list the aesthetics used and which variables are specified for each.
+
+-   x-axis: percentage of people in the country's that disagree that vaccines are safe
+-   y-axis: percentage of people in the country's that disagree that vaccines are effective
+-   color: country (shows in legend)
+
+Not an aesthetic, but there is a `geom_point()` and a `geom_smooth()`
+
+16. What type of graph would you call this?
+
+I would call this type of graph a scatterplot.
+
+17. List all of the problems or things you would improve about this graph.
+
+The main problem I see with this plot is that you have to tilt your head to read the y-axis label. Something I would improve about this graph is instead of just having some countires labeled, to add an interactive element where if you hover over a point, it gives you the country label along with information about the percentages for that respective country.
+
+18. Improve the visualization above by either re-creating it with the issues you identified fixed OR by creating a new visualization that you believe tells the same story better.
+
+```{r}
+#| label: third-improved-visualization
+
+# Compiling vaccine safety/effectiveness data 
+vaccine_plot <- wgm2018_full %>%
+  select(country, Q25, Q26) %>%
+  mutate(disagree_safe = case_when(Q25 <= 3 ~ 0,
+                                   Q25 <= 5 ~ 1,
+                                   TRUE ~ 0),
+         disagree_effective = case_when(Q26 <= 3 ~ 0,
+                                        Q26 <= 5 ~ 1,
+                                        TRUE ~ 0)) %>%
+  group_by(country) %>%
+  summarise(across(c(disagree_safe, disagree_effective), mean, na.rm = TRUE)) %>%
+  ggplot(aes(x = disagree_safe, y = disagree_effective)) +
+  geom_point(aes(text = paste0("Country: ", country, "<br>",
+                               "Disagree vaccines are safe: ", 
+                               round(disagree_safe * 100, 2), "%<br>",
+                               "Disagree vaccines are effective: ", 
+                               round(disagree_effective * 100, 2), "%")),
+             color = "skyblue1", shape = 15, size = 1.8) +
+  geom_smooth(method = "lm", se = FALSE, color = "yellow2", linewidth = 0.8) +
+  theme_bw() +
+  scale_x_continuous(breaks = seq(0, 1, by = 0.1),
+                     labels = label_percent()) +
+  scale_y_continuous(breaks = seq(0, 1, by = 0.1),
+                     labels = label_percent()) +    
+  labs(x = NULL,
+       y = NULL)
+
+# Turn into interactive plotly plot
+ggplotly(vaccine_plot, tooltip = "text") %>%
+  layout(title = list(text = paste0("Scatterplot exploring people's perceptions of vaccine safety <br> and vaccine effectiveness",
+                                    "<br><sup>Percentage of people who disagree that vaccines are safe by percentage of people who <br> disagree that vaccines are effective</sup>"),
+                      x = 0.01,  
+                      xanchor = "left"),
+         margin = list(t = 150))
+```

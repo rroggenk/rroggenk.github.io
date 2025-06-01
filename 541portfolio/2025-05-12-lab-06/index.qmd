@@ -1,0 +1,490 @@
+---
+title: "Lab 6: Code Efficiency"
+description: "Performing Many Different Versions of an Analysis"
+author: "Rachel Roggenkemper"
+date: "05-12-2025"
+categories: [Quarto, R]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+*Note: I did use AI to help me think of scenarios where I needed to add warnings for my functions. I was able to account for the scenarios that are provided in the tests for the functions, but to make the functions more applicable, I wanted it to be able to handle additional scenarios (like if the user inputs a column that doesn't exist in the dataframe).*
+
+This assignment will challenge your function writing abilities. I'm not going to lie, these functions are difficult but well within your reach. I do, however, want to recognize that not everyone is interested in being a "virtuoso" with their function writing. So, there are two options for this week's lab:
+
+-   **Option 1:** Complete this lab assignment in search of virtuoso status with your function writing
+-   **Option 2:** Complete one of the difficult functions (Exercise 1 or Exercise 2 and complete the "Alternative Lab 6".
+
+```{r}
+#| label: load packages 
+#| message: false
+
+library(tidyverse)
+```
+
+# Setting the Stage
+
+My number one use case for writing functions and iteration / looping is to perform some exploration or modeling repeatedly for different "tweaked" versions. For example, our broad goal might be to fit a linear regression model to our data. However, there are often multiple choices that we have to make in practice:
+
+-   Keep missing values or fill them in (imputation)?
+-   Filter out outliers in one or more variables?
+
+We can map these choices to **arguments** in a custom model-fitting function:
+
+-   `impute`: TRUE or FALSE
+-   `remove_outliers`: TRUE or FALSE
+
+A function that implements the analysis and allows for variation in these choices:
+
+```{r}
+#| echo: true
+#| eval: false
+#| label: example-code-to-motivate-function
+
+fit_model <- function(df, impute, remove_outliers, mod) {
+    if (impute) {
+        df <- some_imputation_function(df)
+    }
+    
+    if (remove_outliers) {
+        df <- function_for_removing_outliers(df)
+    }
+    
+    lm(mod, data = df)
+}
+```
+
+# Helper Functions
+
+**Exercise 1:** Write a function that removes outliers in a dataset. The user should be able to supply the dataset, the variables to remove outliers from, and a threshold on the number of SDs away from the mean used to define outliers. *Hint 1: You will need to calculate a z-score to filter the values!* *Hint 2: You might want to consider specifying a default value (e.g., 3) for `sd_thresh`.*
+
+```{r}
+#| label: exercise-1
+
+#' Removes rows where specified numeric columns have outliers.
+#'
+#' @param df A data frame.
+#' @param ... Unquoted names of columns to check for outliers.
+#' @param sd_thresh Numeric. Number of standard deviations from the mean to define an outlier. Default is 3.
+#' @return A filtered data frame with outliers removed from selected numeric columns.
+
+
+remove_outliers <- function(df, ..., sd_thresh = 3) {
+  # Grab the columns the user passed in through ...
+  vars_to_check <- rlang::enquos(...)
+
+  # If no varaibles were given, return the og data with a warning
+  if (length(vars_to_check) == 0) {
+    warning("No variables specified for outlier removal. Returning original data.")
+    return(df)
+  }
+
+  # Extract the user given col names 
+  selected_col_names <- purrr::map_chr(vars_to_check, rlang::as_name)
+
+  # Keep only cols that actually exist in the data
+  existing_selected_cols <- selected_col_names[selected_col_names %in% colnames(df)]
+  non_existing_cols <- setdiff(selected_col_names, existing_selected_cols)
+
+  # Warn the user if they referenced any cols that don’t exist
+  if (length(non_existing_cols) > 0) {
+    warning("These columns don’t exist and will be ignored: ",
+            paste(non_existing_cols, collapse = ", "))
+  }
+
+  # Of the valid cols, figure out which ones are numeric
+  if (length(existing_selected_cols) > 0) {
+    numeric_cols_to_process <- df %>%
+      select(all_of(existing_selected_cols)) %>%
+      select(where(is.numeric)) %>%
+      colnames()
+  } else {
+    numeric_cols_to_process <- character(0)
+  }
+
+  # Warn if any of the selected cols are not numeric
+  non_numeric_selected <- setdiff(existing_selected_cols, numeric_cols_to_process)
+  if (length(non_numeric_selected) > 0) {
+    warning("These columns aren’t numeric and will be ignored: ",
+            paste(non_numeric_selected, collapse = ", "))
+  }
+
+  # If we have nothing numeric to check, return the og data
+  if (length(numeric_cols_to_process) == 0) {
+    if (length(existing_selected_cols) > 0) {
+      warning("None of the specified variables are numeric. Returning original data.")
+    }
+    return(df)
+  }
+
+  # Filter the data to keep only rows where all specified numeric vars
+  # are either NA or within the sd_thresh cutoff (i.e., not outliers)
+  df_filtered <- df %>%
+    filter(
+      if_all(
+        all_of(numeric_cols_to_process),
+        ~ {
+          m <- mean(., na.rm = TRUE)
+          s <- sd(., na.rm = TRUE)
+
+          if (is.na(s) || s == 0) {
+            TRUE  # If sd=0, don’t remove anything
+          } else {
+            abs((. - m) / s) <= sd_thresh  # Keep if within threshold
+          }
+        } | is.na(.)  # Always keep NA values
+      )
+    )
+
+  return(df_filtered)
+}
+```
+
+## Testing Your Function!
+
+```{r}
+#| label: exercise-1-test
+#| error: true
+
+## Testing how your function handles multiple input variables
+remove_outliers(diamonds, 
+                price, 
+                x, 
+                y, 
+                z)
+
+## Testing how your function handles an input that isn't numeric
+remove_outliers(diamonds, 
+                price, 
+                color)
+
+## Testing how your function handles a non-default sd_thresh
+remove_outliers(diamonds, 
+                price,
+                x, 
+                y, 
+                z, 
+                sd_thresh = 2)
+```
+
+**Exercise 2:** Write a function that imputes missing values for numeric variables in a dataset. The user should be able to supply the dataset, the variables to impute values for, and a function to use when imputing. *Hint 1: You will need to use `across()` to apply your function, since the user can input multiple variables.* *Hint 2: The `replace_na()` function is helpful here!*
+
+```{r}
+#| label: exercise-2
+
+#' Imputes missing values in specified numeric columns using a summary function.
+#'
+#' @param df A data frame.
+#' @param ... Unquoted column names to impute.
+#' @param impute_fun A function like `mean` or `median` used to compute replacement values. Default is `mean`.
+#' @return A data frame where NAs in the selected numeric columns are replaced.
+
+
+impute_missing <- function(df, ..., impute_fun = mean) {
+  # Capture the unquoted col names
+  vars_to_impute <- rlang::enquos(...)
+
+  # If the user doesn’t pass any vars, just return the og data
+  if (length(vars_to_impute) == 0) {
+    warning("No variables specified for imputation. Returning original data.")
+    return(df)
+  }
+
+  # Extract the user given col names 
+  selected_col_names <- purrr::map_chr(vars_to_impute, rlang::as_name)
+
+  # Only keep columns that actually exist in the data
+  existing_selected_cols <- selected_col_names[selected_col_names %in% names(df)]
+  non_existing_cols <- setdiff(selected_col_names, existing_selected_cols)
+
+  # Warn if any user-specified cols weren’t found
+  if (length(non_existing_cols) > 0) {
+    warning("These columns don’t exist in the data and will be skipped: ",
+            paste(non_existing_cols, collapse = ", "))
+  }
+
+  # From the valid cols, keep only the numeric ones
+  if (length(existing_selected_cols) > 0) {
+    numeric_cols_to_process <- df %>%
+      select(any_of(existing_selected_cols)) %>%
+      select(where(is.numeric)) %>%
+      colnames()
+  } else {
+    numeric_cols_to_process <- character(0)
+  }
+
+  # Warn if any of the selected cols aren’t numeric
+  non_numeric_selected <- setdiff(existing_selected_cols, numeric_cols_to_process)
+  if (length(non_numeric_selected) > 0) {
+    warning("These columns are not numeric and will be ignored: ",
+            paste(non_numeric_selected, collapse = ", "))
+  }
+
+  # If there’s nothing numeric to process, just return the og data
+  if (length(numeric_cols_to_process) == 0) {
+    if (length(existing_selected_cols) > 0 && length(non_existing_cols) < length(selected_col_names)) {
+      warning("No numeric columns found among selected variables. Returning original data.")
+    }
+    return(df)
+  }
+
+  # Go through each selected numeric col and fill in the missing vals
+  df_imputed <- df %>%
+    mutate(
+      across(
+        all_of(numeric_cols_to_process),
+        ~ {
+          current_col_name <- cur_column()
+          valid_values <- .[!is.na(.)]
+
+          # Start with NA in case we can’t compute a valid value
+          imputation_value <- NA
+
+          # If the whole column is NA, we can't impute anything, so leave it as is
+          if (length(valid_values) == 0) {
+            imputation_value <- NA
+          } else {
+            # Try applying the user-specified function to get a value
+            temp_imputation_value <- tryCatch(
+              impute_fun(valid_values),
+              error = function(e) {
+                warning(paste0("Problem applying impute_fun to '", current_col_name, 
+                               "': ", e$message, ". Leaving NAs as-is."))
+                return(NA)
+              }
+            )
+
+            # Only keep the result if it’s one number / a single value
+            # Gemmy advised to add this step 
+            if (length(temp_imputation_value) == 1 && is.atomic(temp_imputation_value)) {
+              imputation_value <- temp_imputation_value
+            } else {
+              warning(paste0("Imputation function for '", current_col_name, 
+                             "' didn’t return a single value. Leaving NAs as-is."))
+              imputation_value <- NA
+            }
+          }
+
+          # Fill in missing values with the computed imputation value
+          tidyr::replace_na(., imputation_value)
+        }
+      )
+    )
+
+  return(df_imputed)
+}
+```
+
+## Testing Your Function!
+
+```{r}
+#| label: exercise-2-test
+#| error: true
+
+## Testing how your function handles multiple input variables
+impute_missing(nycflights13::flights, 
+               arr_delay, 
+               dep_delay) 
+
+## Testing how your function handles an input that isn't numeric
+impute_missing(nycflights13::flights, 
+               arr_delay, 
+               carrier)
+
+## Testing how your function handles a non-default impute_fun
+impute_missing(nycflights13::flights, 
+               arr_delay, 
+               dep_delay, 
+               impute_fun = median)
+```
+
+# Primary Function
+
+**Exercise 3:** Write a `fit_model()` function that fits a specified linear regression model for a specified dataset. The function should:
+
+-   allow the user to specify if outliers should be removed (`TRUE` or `FALSE`)
+-   allow the user to specify if missing observations should be imputed (`TRUE` or `FALSE`)
+
+If either option is `TRUE`, your function should call your `remove_outliers()` or `impute_missing()` functions to modify the data **before** the regression model is fit.
+
+```{r}
+#| label: exercise-3
+
+#' Fits a linear model with optional data preprocessing.
+#'
+#' @param df A data frame.
+#' @param mod_formula A model formula (or a string that can be converted to one).
+#' @param remove_outliers Logical. If TRUE, runs remove_outliers() on specified columns.
+#' @param impute_missing Logical. If TRUE, runs impute_missing() on specified columns.
+#' @param ... Unquoted names of columns to use for preprocessing (outlier removal and/or imputation).
+#' @return A fitted lm object.
+
+
+fit_model <- function(df, mod_formula, remove_outliers = FALSE, impute_missing = FALSE, ...) {
+  # Grab the vars the user passed to ... 
+  vars_for_processing <- rlang::enquos(...)
+
+  # Work on a copy of the dataset so we don’t overwrite the og
+  processed_df <- df
+
+  # If user wants to remove outliers, run that step first
+  if (remove_outliers) {
+    processed_df <- remove_outliers(processed_df, !!!vars_for_processing)
+    message(paste("After outlier removal, data has", nrow(processed_df), "rows."))
+  }
+
+  # If user wants to fill in missing values, run that next
+  if (impute_missing) {
+    processed_df <- impute_missing(processed_df, !!!vars_for_processing)
+    message("Missing value imputation applied (if needed).")
+  }
+
+  # Make sure the model formula is actually a formula object
+  if (!inherits(mod_formula, "formula")) {
+    current_env <- rlang::caller_env()
+    mod_formula_str <- mod_formula
+    mod_formula <- tryCatch(
+      stats::as.formula(mod_formula, env = current_env),
+      error = function(e) {
+        stop(paste0("mod_formula '", mod_formula_str, "' couldn’t be converted to a formula: ", e$message))
+      }
+    )
+  }
+
+  # Try fitting the model and return it
+  model <- tryCatch({
+    stats::lm(mod_formula, data = processed_df)
+  }, error = function(e) {
+    stop(paste0("Model fitting failed: ", e$message,
+                "\nAfter preprocessing, data had ",
+                nrow(processed_df), " rows and ", ncol(processed_df), " columns."))
+  })
+
+  return(model)
+}
+```
+
+## Testing Your Function!
+
+```{r}
+#| label: exercise-3-test
+
+fit_model(
+  diamonds,
+  mod_formula = price ~ carat + cut,
+  remove_outliers = TRUE,
+  impute_missing = TRUE,
+  price, 
+  carat
+)
+```
+
+# Iteration
+
+In the `diamonds` dataset, we want to understand the relationship between `price` and size (`carat`). We want to explore variation along two choices:
+
+1.  The variables included in the model. We'll explore 3 sets of variables:
+
+    -   No further variables (just `price` and `carat`)
+    -   Adjusting for `cut`
+    -   Adjusting for `cut` and `clarity`
+    -   Adjusting for `cut`, `clarity`, and `color`
+
+2.  Whether or not to impute missing values
+
+3.  Whether or not to remove outliers in the `carat` variable (we'll define outliers as cases whose `carat` is over 3 SDs away from the mean).
+
+## Parameters
+
+First, we need to define the set of parameters we want to iterate the `fit_model()` function over. The `tidyr` package has a useful function called `crossing()` that is useful for generating argument combinations. For each argument, we specify all possible values for that argument and `crossing()` generates all combinations. *Note that you can create a list of formula objects in R with `c(y ~ x1, y ~ x1 + x2)`.*
+
+```{r}
+#| label: example-crossing-arguments
+#| eval: false
+
+df_arg_combos <- crossing(
+    impute = c(TRUE, FALSE),
+    remove_outliers = c(TRUE, FALSE), 
+    mod = c(y ~ x1, 
+            y ~ x1 + x2)
+)
+df_arg_combos
+```
+
+**Exercise 4:** Use `crossing()` to create the data frame of argument combinations for our analyses.
+
+```{r}
+#| label: exercise-4
+
+# Step 1: Set up the different model formulas 
+# Each one adds more predictors to see how the model changes
+model_formulas <- list(
+  price ~ carat,
+  price ~ carat + cut,
+  price ~ carat + cut + clarity,
+  price ~ carat + cut + clarity + color
+)
+
+# Step 2: Decide whether or not to impute missing values
+# Test both options: with and without imputation
+imputation_options <- c(TRUE, FALSE)
+
+# Step 3: Decide whether or not to remove outliers
+# Test both options: with and without removing outliers
+outlier_removal_options <- c(TRUE, FALSE)
+
+# Step 4: Create all possible combinations of the above choices
+# crossing() makes a data frame with every combo of formula, impute, and outlier setting
+# These column names match the argument names used in the fit_model() function
+df_arg_combos <- tidyr::crossing(
+  mod_formula = model_formulas,
+  impute_missing = imputation_options,
+  remove_outliers = outlier_removal_options
+)
+
+# Step 5: Take a look at the combinations created
+# There should be 4 formulas × 2 impute options × 2 outlier options = 16 total
+print(df_arg_combos)
+```
+
+## Iterating Over the Parameters
+
+We've arrived at the final step!
+
+**Exercise 5:** Use `pmap()` from `purrr` to apply the `fit_model()` function to every combination of arguments from \`diamonds.
+
+```{r}
+#| label: exercise-5
+
+# Apply fit_model() to each row of df_arg_combos
+# This will run all the combinations of formula, outlier removal, and imputation
+
+message("Starting model fitting for ", nrow(df_arg_combos), " combinations...")
+
+df_results <- df_arg_combos %>%
+  mutate(
+    model_object = purrr::pmap(
+      # .l = list of arguments to vary; must match fit_model()’s argument names
+      .l = list(
+        mod_formula = mod_formula,
+        impute_missing = impute_missing,
+        remove_outliers = remove_outliers
+      ),
+      # .f = function to call on each row
+      .f = fit_model,
+      # These arguments are the same across all rows
+      df = diamonds,
+      carat  # Passed to ... inside fit_model; used for preprocessing
+    )
+  )
+
+message("Model fitting complete. Results are saved in 'df_results'.")
+
+# Checking results:— each row should include the fitted model
+print(df_results)
+```

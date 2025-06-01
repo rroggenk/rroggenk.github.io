@@ -1,0 +1,177 @@
+---
+title: "Lab 9: Generative Art"
+description: "Art Gallery"
+author: "Rachel Roggenkemper"
+date: "06-02-2025"
+categories: [Quarto, R]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+## Set Up
+
+```{r}
+#| label: setup
+#| message: false
+
+library(ggplot2)
+library(dplyr)
+library(RColorBrewer) 
+library(ambient) 
+library(purrr) 
+
+set.seed(123)
+```
+
+------------------------------------------------------------------------
+
+## Art Piece 1
+
+```{r}
+#| label: art piece 1
+
+# Parameters
+num_walks <- 500
+num_steps <- 100
+step_size_sd <- 0.1
+
+# Generate random walk data
+walk_data <- map_df(1:num_walks, ~{
+  x_pos <- 0
+  y_pos <- 0
+  path_x <- numeric(num_steps)
+  path_y <- numeric(num_steps)
+  
+  for (i in 1:num_steps) {
+    x_pos <- x_pos + rnorm(1, 0, step_size_sd)
+    y_pos <- y_pos + rnorm(1, 0, step_size_sd)
+    path_x[i] <- x_pos
+    path_y[i] <- y_pos
+  }
+  
+  tibble(
+    walk_id = .x,
+    step_id = 1:num_steps,
+    x = path_x,
+    y = path_y
+  )
+})
+
+# Create the plot
+ggplot(walk_data, aes(x = x, y = y, group = walk_id, color = factor(walk_id))) +
+  geom_path(alpha = 0.15, linewidth = 0.3) +
+  scale_color_manual(values = rep(brewer.pal(11, "Spectral"), length.out = num_walks)) +
+  theme_void() +
+  coord_fixed() +
+  theme(
+    legend.position = "none", # Hide legend for cleaner look
+    plot.background = element_rect(fill = "black", color = "black")
+  )
+```
+
+**Title:** *Stochastic Bloom*
+
+**Museum-Style Description:**
+
+This piece, *Stochastic Bloom*, captures the inherent tension between order and chaos that governs complex systems. Each luminous trajectory, born from a simple generative rule, embarks on a journey of apparent randomness. Yet, from this multitude of individual paths, a collective, almost organic structure emerges. The artist invites the viewer to contemplate the unseen algorithms that shape our world, from the flocking of birds to the ebb and flow of digital information. It is a meditation on emergence, where simplicity begets profound complexity, and data points transform into ethereal dance.
+
+**Description of the Code Choices and How They Influenced the Appearance:**
+
+-   **Data Generation:** The piece uses data generated from `num_walks` 2D random walks. Each walk starts from the center of the canvas (0,0) and takes `num_steps` steps. The step for each walk is generated using `rnorm()` for both x and y increments with a standard deviation of `step_size_sd`, ensuring a degree of unpredictability in their paths.
+
+-   **Plotting with `ggplot2`:** The `ggplot2` package is the primary tool.
+
+    -   `geom_path()`: Each random walk is rendered as a separate path. By using `geom_path` for each of the `num_walks` random walks, we trace the journey of each data series as a continuous line, creating the filamentous structure. The `linewidth` is set to `0.3` for thin lines.
+
+    -   **Aesthetics & Color:**
+
+        -   `alpha` (transparency): Each path is drawn with `alpha = 0.15`. Setting a low alpha value for the paths allows their overlaps to create areas of greater density and visual weight, highlighting regions where many paths converge or cross.
+
+        -   `color`: The color of each line is mapped to its `walk_id` using `factor(walk_id)`. A repeating spectral palette from `RColorBrewer` (`brewer.pal(11, "Spectral")`) is used. By mapping the `color` aesthetic to the unique ID of each random walk using a repeating spectral palette, a vibrant differentiation between lines is achieved, preventing a monotonous visual and adding depth.
+
+    -   **Theme and Axes:**
+
+        -   `theme_void()`: This theme is used to remove axes, gridlines, and most background elements. Employing `theme_void()` strips the canvas of traditional chart elements, focusing the viewer's attention entirely on the artistic form of the data itself.
+
+        -   `plot.background = element_rect(fill = "black", color = "black")`: The plot background is set to black to make the colored lines stand out.
+
+        -   `coord_fixed()`: This ensures that the aspect ratio is maintained, so the random walks spread evenly in all directions. Using `coord_fixed()` maintains a 1:1 aspect ratio, preventing distortion and ensuring the 'explosion' of lines feels symmetrical and balanced in its spread.
+
+        -   `legend.position = "none"`: The legend is hidden to maintain a clean, artistic look.
+
+------------------------------------------------------------------------
+
+## Art Piece 2
+
+```{r}
+#| label: art piece 2
+
+# Parameters for Perlin noise
+grid_width <- 500
+grid_height <- 300
+noise_frequency <- 0.02 # Lower frequency for larger, smoother patterns
+noise_octaves <- 5 # More octaves for more detail/richness
+
+# Generate Perlin noise
+# Using long_grid for a more convenient format for ggplot
+noise_data <- long_grid(
+  x = seq(0, 1, length.out = grid_width),
+  y = seq(0, 1, length.out = grid_height)
+) %>%
+  mutate(
+    noise_value = gen_perlin(x, y, frequency = noise_frequency, octaves = noise_octaves)
+  )
+
+# Create the plot
+ggplot(noise_data, aes(x = x, y = y, fill = noise_value)) +
+  geom_raster(interpolate = TRUE) + # interpolate = TRUE for smoother transitions
+  scale_fill_gradientn(
+    colors = c("#000033", "#000066", "#2E0854", "#4B0082", "#8A2BE2", "#FF00FF", "#FF69B4", "#1E90FF", "#00BFFF", "#AFEEEE"),
+    name = "" # No legend title
+  ) +
+  theme_void() +
+  coord_fixed(expand = FALSE) + # expand = FALSE to fill the entire plot area
+  theme(
+    legend.position = "none", # Hide legend for purely artistic view
+    plot.background = element_rect(fill = "black", color = "black")
+  )
+```
+
+**Title:** *Rstrology*
+
+**Museum-Style Description:**
+
+Behold *Rstrology*, a sublime confluence where the rigorous logic of R code meets the enigmatic allure of the cosmos, unfurling as a digital aurora of celestial gradients. Bands of vibrant, otherworldly light—deep cosmic indigos melting into spectral purples, superheated magentas, and ethereal cyans—streak across the canvas, suggesting distant nebulae or the very fabric of a synthetic universe taking form. The artist harnesses R to sculpt new firmaments, inviting contemplation on whether these are the birth colors of stars, the resonant frequencies of data streams, or a horoscope cast in code. *Rstrology* challenges us to find the poetic in the programmatic, seeking the soul in the machine and the universal patterns that bind the stars to the silicon chip, offering a meditation on the inherent beauty found in the structured randomness governing both galaxies and algorithms.
+
+**Description of the Code Choices and How They Influenced the Appearance:**
+
+-   **Core Generative Technique: Perlin Noise:** The foundation of this piece is 2D Perlin noise generated using the `ambient` package in R.
+
+    -   `gen_perlin()`: A 2D grid of Perlin noise values is created using `ambient::gen_perlin()` on a grid generated by `ambient::long_grid()`. The grid dimensions are `grid_width` by `grid_height`. By generating a matrix of Perlin noise, we obtain a set of smoothly varying values that form the fundamental structure of the image's light and dark regions.
+
+    -   **Frequency/Scale:** The `frequency` parameter in `gen_perlin()` is set to `noise_frequency`. Choosing a relatively low frequency for the Perlin noise results in large, sweeping patterns and gentle gradations rather than fine, chaotic detail, contributing to the sense of vastness.
+
+    -   **Octaves:** The `octaves` parameter is set to `noise_octaves`. Using multiple octaves adds layers of noise at different frequencies, creating a richer and more detailed texture within the larger forms.
+
+-   **Color Mapping with `ggplot2`:**
+
+    -   `geom_raster()`: The noise matrix is visualized using `geom_raster`. The `interpolate = TRUE` argument helps smooth the color transitions between pixels. The `geom_raster()` function maps each noise value directly to a pixel on the canvas. `interpolate = TRUE` further enhances the smoothness, creating a more fluid visual field.
+
+    -   `scale_fill_gradientn()`: A custom multi-color gradient is used to map noise values to colors. The chosen colors are `c("#000033", "#000066", "#2E0854", "#4B0082", "#8A2BE2", "#FF00FF", "#FF69B4", "#1E90FF", "#00BFFF", "#AFEEEE")`. By applying this carefully selected multi-color gradient—transitioning from deep blues and purples through vibrant pinks to bright cyans—the raw noise values are transformed into the otherworldly hues that define the piece's atmosphere.
+
+-   **Canvas Styling:**
+
+    -   `theme_void()`: This removes all axes, gridlines, and background elements. The use of `theme_void()` removes all distracting chart elements, immersing the viewer fully in the generated visual.
+
+    -   `coord_fixed(expand = FALSE)`: This maintains the aspect ratio of the noise grid and ensures the raster fills the entire plot area without padding. Using `coord_fixed(expand = FALSE)` ensures the noise patterns are not unnaturally stretched and that the artwork extends to the very edges of the frame.
+
+    -   `legend.position = "none"`: The color scale legend is hidden.
+
+    -   `plot.background = element_rect(fill = "black", color = "black")`: The plot background is set to black to enhance the luminosity of the colors.
+
+------------------------------------------------------------------------

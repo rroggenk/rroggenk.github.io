@@ -1,0 +1,246 @@
+---
+title: "Lab 7: Using APIs"
+description: "Visualizing International Space Station Information via APIs"
+author: "Rachel Roggenkemper, Liam Quach, and Lily Cook"
+date: "05-19-2025"
+categories: [Quarto, R]
+image: preview-image.png
+format: html
+embed-resources: true
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+### Libraries
+
+```{r}
+#| label: libraries
+#| output: false
+
+library(tidyverse)
+library(httr)
+library(tidyjson)
+library(jsonlite)
+library(leaflet)
+
+```
+
+### Reading in capitals
+
+```{r}
+#| label: capitals
+
+capitals <- read_table("state_capitals_ll.txt", col_names = F)
+
+capital_names <- read_table("state_capitals_name.txt", col_names = F)
+
+colnames(capitals) <- c("state", "lat", "long") #add names
+colnames(capital_names) <- c("state", "capital")
+
+capital_names <- capital_names %>% mutate(capital =  str_remove_all(capital, '"')) # remove unnecessary quote
+
+capitals <- capitals %>% 
+  filter(state != "US") %>% # filter out random coords
+  filter(state != "AK") %>% # filter out alaska, doesn't pass by
+  left_join(capital_names, by = "state") 
+
+```
+
+## API functions
+
+```{r}
+#| label: api-functions
+
+# function to get pass times for a single capital
+
+get_single_location_passes <- function(lat, long) {
+  api_base_url <- "https://api.g7vrd.co.uk/v1/satellite-passes/25544"
+  request_url <- paste0(api_base_url, "/", lat, "/", long, ".json")
+  
+  # get request
+  response <- GET(request_url)
+  
+  # check if the request successful, if success get content
+  if (status_code(response) == 200) {
+    content <- content(response, "text", encoding = "UTF-8")
+    pass_data <- fromJSON(content)
+    
+    # extract time 
+    if (length(pass_data$passes) > 0 && "tca" %in% names(pass_data$passes)) {
+      # get first 3 TCA timestamps
+      return(head(pass_data$passes$tca, 3))
+    } else {
+      return(NULL) # if no passes found or tca field missing
+    }
+  } else {
+    warning(paste("API request failed for lat:", lat, "long:", long, "with status:", status_code(response)))
+    return(NULL) # if request failed
+  }
+}
+
+# function to get pass times for capitals and create df
+get_all_capitals_passes <- function(df) {
+  # empty list to store results
+  all_passes_list <- list()
+  
+  # loop through each capital
+  for (i in 1:nrow(df)) {
+    capital_info <- df[i, ]
+    
+    pass_times_vector <- get_single_location_passes(lat = capital_info$lat, long = capital_info$long)
+    
+    # make tibble for the capital pass times
+    # three time columns, NA if less than 3 
+    current_passes_df <- tibble(
+      state_abbr = capital_info$state,
+      capital_name = capital_info$capital,
+      lat = capital_info$lat,
+      long = capital_info$long,
+      time1 = if (length(pass_times_vector) >= 1) pass_times_vector[1] else NA_character_,
+      time2 = if (length(pass_times_vector) >= 2) pass_times_vector[2] else NA_character_,
+      time3 = if (length(pass_times_vector) >= 3) pass_times_vector[3] else NA_character_
+    )
+    
+    all_passes_list[[i]] <- current_passes_df
+    
+    # wait for 1 second between requests
+    Sys.sleep(1) 
+  }
+  
+  # combine all tibbles
+  final_df <- bind_rows(all_passes_list)
+  return(final_df)
+}
+
+```
+
+### Pass Times Data
+
+```{r}
+#| label: passtimes
+
+# raw pass times for all capitals
+iss_pass_data_raw <- get_all_capitals_passes(capitals)
+
+# convert times and sort
+iss_pass_data_processed <- iss_pass_data_raw |>
+  # convert UTC to datetime - help from AI
+  mutate(
+    time1_dt = ymd_hms(time1, tz = "UTC"),
+    time2_dt = ymd_hms(time2, tz = "UTC"),
+    time3_dt = ymd_hms(time3, tz = "UTC")
+  ) |>
+  # arrange by first pass time
+  arrange(time1_dt) |>
+  # remove rows where time 1 is NA
+  filter(!is.na(time1_dt))
+```
+
+## 2-5. Mapping the Data and Drawing the ISS Route
+
+### Define Custom Icon
+
+```{r}
+#| label: define-icon
+
+satellite_icon <- makeIcon(
+  iconUrl = "https://png.pngtree.com/png-clipart/20230111/original/pngtree-rocket-icon-vector-png-image_8902705.png",
+  iconWidth = 25, 
+  iconHeight = 25,
+  iconAnchorX = 12, 
+  iconAnchorY = 12  
+)
+```
+
+### Create the Leaflet Map
+
+We construct the map layer by layer.
+
+```{r}
+#| label: create-leaflet-map
+#| fig-height: 7 
+
+# ensure there is data for plot
+if (nrow(iss_pass_data_processed) > 0) {
+  
+  # format times (local time zone for readability) for labels etc
+  
+  map_data <- iss_pass_data_processed |>
+    mutate(
+      time1_display = format(time1_dt, "%Y-%m-%d %H:%M:%S UTC"),
+      time2_display = format(time2_dt, "%Y-%m-%d %H:%M:%S UTC"),
+      time3_display = format(time3_dt, "%Y-%m-%d %H:%M:%S UTC"),
+      
+      # handle NA times in display strings
+      time2_display = ifelse(is.na(time2_dt), "N/A", time2_display),
+      time3_display = ifelse(is.na(time3_dt), "N/A", time3_display)
+    )
+
+  # hover labels
+  hover_labels <- paste0(
+    "<strong>Capital:</strong> ", map_data$capital_name, "<br>",
+    "<strong>State:</strong> ", map_data$state_abbr, "<br>",
+    "<strong>Soonest Pass:</strong> ", map_data$time1_display
+  ) |> lapply(htmltools::HTML) # lapply with HTML for proper rendering
+
+  # click popups
+  click_popups <- paste0(
+    "<strong>Capital:</strong> ", map_data$capital_name, " (", map_data$state_abbr, ")<br><br>",
+    "<strong>Predicted Pass Times (UTC):</strong><br>",
+    "1. ", map_data$time1_display, "<br>",
+    "2. ", map_data$time2_display, "<br>",
+    "3. ", map_data$time3_display
+  ) |> lapply(htmltools::HTML)
+
+  # create the map
+  iss_map <- leaflet(data = map_data) |>
+    addTiles(group = "OSM (Default)") |> # add default OpenStreetMap map tiles
+    addProviderTiles(providers$CartoDB.Positron, group = "CartoDB Positron") |>
+    addProviderTiles(providers$Esri.WorldImagery, group = "Esri World Imagery") |>
+    
+    # markers for each state capital
+    addMarkers(
+      lng = ~long, 
+      lat = ~lat,
+      icon = satellite_icon,
+      label = hover_labels,
+      popup = click_popups,
+      group = "State Capitals"
+    ) |>
+    
+    #  polylines connecting capitals in order of first pass time
+    addPolylines(
+      lng = ~long,
+      lat = ~lat,
+      color = "#E6007E", 
+      weight = 3,
+      opacity = 0.8,
+      dashArray = "5, 5", # dashed line
+      group = "ISS Pass Order Path"
+    ) |>
+    
+    #  layer controls to toggle layers
+    addLayersControl(
+      baseGroups = c("OSM (Default)", "CartoDB Positron", "Esri World Imagery"),
+      overlayGroups = c("State Capitals", "ISS Pass Order Path"),
+      options = layersControlOptions(collapsed = FALSE)
+    ) |>
+    
+    # legend for the polyline
+    addLegend(
+        position = "bottomright",
+        colors = "#E6007E",
+        labels = "ISS Pass Order Path",
+        title = "Map Features"
+    )
+
+  # display the map
+  iss_map
+
+} else {
+  print("No ISS pass data available to map. Check API calls or data processing steps.")
+}
+
+```
