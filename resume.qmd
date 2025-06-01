@@ -1,0 +1,12 @@
+---
+title: "Resume"
+format: html
+---
+
+I’m actively seeking full-time opportunities in data science or analytics and am open to relocating anywhere within the U.S. My background combines strong statistical foundations, programming skills, and applied research experience, and I’m excited to bring these strengths to a collaborative, impact-driven team. Below is my resume.
+
+<iframe src="resume/Resume_Rachel_Roggenkemper.pdf" width="100%" height="800px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>

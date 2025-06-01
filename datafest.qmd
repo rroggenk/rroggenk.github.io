@@ -1,0 +1,18 @@
+---
+title: "DataFest"
+format: html
+---
+
+## Team R-sonists: C.R.A.K.ing the Code to Improve Student Learning
+
+In Spring 2024, I competed in Cal Poly’s first in-person DataFest, a 48-hour data analysis competition hosted by the Statistics Department. My team of four, The R-sonists, was challenged to analyze a real-world dataset provided by CourseKata, an organization focused on improving statistics education. We were tasked with uncovering actionable insights and delivering a concise three-slide presentation to a panel of judges.
+
+Despite the intense time constraint, we identified key factors impacting student engagement and end-of-course (EOC) outcomes, using multivariate regression and MANOVA to support our recommendations. Our findings emphasized how specific question types and chapter sequencing could better support student learning outcomes.
+
+Our team was honored with the Best in Show award (out of 10 teams) for the strength of our analysis and presentation. The following year, I was invited back to serve as a DataFest mentor, supporting new participants as a graduate student.
+
+<iframe src="datafest/DataFest_Presentation.pdf" width="100%" height="600px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>

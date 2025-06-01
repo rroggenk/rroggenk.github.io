@@ -1,0 +1,38 @@
+---
+title: "Research: Negative Hypergeometric Confidence Intervals"
+format: html
+---
+
+Beginning in Spring 2022, I conducted research on short exact confidence intervals for the parameters of the negative hypergeometric (NHG) distribution. I started this work during my undergraduate studies and continued it through the summer as part of the Frost Summer Undergraduate Research Program (SURP), where I collaborated with Hannah Pawig, who focused on confidence intervals for the Poisson distribution. I later expanded this work into my master’s thesis.
+
+Under the mentorship of Dr. Bret Holladay, I developed multiple algorithms to construct optimal confidence intervals for the NHG distribution—intervals that are both valid and more precise than commonly used methods. This work addressed shortcomings in existing approaches, such as undercoverage and overly conservative intervals. To improve accessibility, I created a Shiny app and developed an R package for practitioners and researchers. Dr. Holladay and I are now in the process of preparing a manuscript for submission to a peer-reviewed journal, and my thesis is currently being published through the university.
+
+## Thesis Presentation Slides
+
+These slides were part of my public master’s thesis presentation. They introduce the NHG distribution and its applications (such as estimating population size via capture-recapture), and describe the motivation, methodology, and comparative performance of the new confidence interval procedures I developed. The presentation concludes with a demo of the Shiny app and R package.
+
+<iframe src="nhg_ci/ThesisPresentation.pdf" width="100%" height="600px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>
+
+## Frost SURP Poster
+
+This poster summarized the research Hannah and I conducted during the FROST summer program. It outlined the limitations of existing confidence interval methods for discrete distributions, introduced the Conditional Minimal Cardinality (CMC) method, and showcased our comparative results. It also emphasized our efforts to make these tools accessible through interactive Shiny apps and open-source code. Out of ten FROST research teams, we were one of two teams selected to represent the program at a college-wide research symposium. We also presented this poster at an additional university-wide research conference, sharing our work with a broader academic audience.
+
+<iframe src="nhg_ci/Frost_SURP_Discrete_CI_2025_Poster.pdf" width="100%" height="750px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>
+
+## Frost SURP Slides
+
+These slides accompanied the joint presentation Hannah and I gave at the conclusion of our summer research. We presented them at the Statistics Department Summer Research Showcase, where we shared the motivation, methodology, and applications of our work with faculty and peers. The slides highlight the importance of accessible statistical tools, including our development of Shiny apps for both Poisson and NHG distributions, and outline our future goals of publishing the methods and finalizing the R package.
+
+<iframe src="nhg_ci/Frost_SURP_Discrete_CI_2025_Slides.pdf" width="100%" height="600px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>

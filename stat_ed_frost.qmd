@@ -1,0 +1,38 @@
+---
+title: "Research: Statistics Education"
+format: html
+---
+
+My research in statistics education focused on improving student engagement in asynchronous online statistics courses, particularly through the development and evaluation of a collaborative learning tool called Collaborative Keys (CKs). I joined this research project through the Frost Undergraduate Research Program, working under Dr. Anelise Sabbag alongside a team of faculty and students.
+
+Our work used classroom-based research and the Community of Inquiry framework to study how students interact in online group assignments. We investigated how different CK structures influenced student collaboration, performance, and social presence. I contributed to data analysis, rubric design, coding of interactions, and co-authorship of a peer-reviewed paper. This research aimed to inform best practices for fostering meaningful student-to-student interaction in virtual learning environments.
+
+## Journal Article
+
+Published in the *Journal of Statistics and Data Science Education*, this peer-reviewed article presents our research on revising Collaborative Keys to better promote engagement and cooperative learning. We found that moving from whole-class to small-group CKs led to more meaningful interaction, stronger social presence, and improved collaboration. I contributed to both the research and authorship of the paper, which showcases empirical evidence and offers practical implications for instructors designing online statistics courses.
+
+<iframe src="stat_ed_frost/The Development of Collaborative Keys to Promote Engagement in Undergraduate Online Asynchronous Statistics Courses.pdf" width="100%" height="800px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>
+
+## Frost SURP Poster
+
+This poster was presented at a college-wide research conference as part of our participation in the Frost Undergraduate Research Program. It summarizes our research questions, methods, and early findings on how Collaborative Keys (CKs) foster student engagement in online statistics courses. The poster highlights trends in student performance and interaction patterns, outlines our grading rubric, and discusses how different CK structures influenced group dynamics and participation. We also introduced our use of the Community of Inquiry framework to evaluate social, cognitive, and teaching presence.
+
+<iframe src="stat_ed_frost/poster_FROST.pdf" width="100%" height="750px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>
+
+## Frost SURP Presentation
+
+These slides were presented at the Statistics Department Summer Research Colloquium and walk through our research process in more detail. The presentation covered our rubric development, coding of student responses, and use of the Community of Inquiry framework. We shared insights from our literature review and preliminary analysis, and described how small-group CKs led to increased collaboration and improved peer interaction in asynchronous learning environments.
+
+<iframe src="stat_ed_frost/FROST_Fall_Slides.pdf" width="100%" height="600px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="resume.pdf">Download the PDF</a>.</p>
+
+</iframe>

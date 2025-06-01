@@ -8,6 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: resume.qmd
+        text: Resume
+      - href: nhg_ci.qmd
+        text: Negative Hypergeometric CIs
+      - href: course_projects.qmd
+        text: Course Projects
+      - href: datafest.qmd
+        text: DataFest
+      - href: stat_ed_frost.qmd
+        text: Statistics Education Research
       - href: 541portfolio.qmd
         text: STAT 541 Portfolio
     right: 
@@ -18,7 +28,7 @@ website:
         href: https://www.linkedin.com/in/rroggenk/ 
         aria-label: LinkedIn
       - icon: envelope
-        href: mailto:rroggenk@calpoly.edu 
+        href: mailto:rroggenk@gmail.com
         aria-label: Email
 
 format:
