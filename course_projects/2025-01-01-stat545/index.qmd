@@ -7,21 +7,21 @@ categories: [Statistics, R]
 image: preview-image.jpg
 format: html
 embed-resources: true
-# resources: 
+resources: STAT545 - Project.html
 editor: source
 execute: 
   echo: true
   warning: false
 ---
 
-<!-- **Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try: -->
+**Note:** File previews may not display in some browsers (especially Chrome). If the file viewer does not appear below, please try:
 
-<!-- - Opening this page in **Safari** or **Firefox**, or   -->
+- Opening this page in **Safari** or **Firefox**, or
 
-<!-- - **[Click here to download the PDF](project_proposal.pdf)** -->
+- **[Click here to download the html](STAT545 - Project.html)**
 
-<!-- ```{=html} -->
+```{=html}
 
-<!-- <iframe src="project_proposal.pdf" width="100%" height="800px" style="border: none;"></iframe> -->
+<iframe src="STAT545 - Project.html" width="100%" height="800px" style="border: none;"></iframe>
 
-<!-- ``` -->
+```

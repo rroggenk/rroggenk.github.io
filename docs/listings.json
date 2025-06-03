@@ -1,18 +1,5 @@
 [
   {
-    "listing": "/541portfolio.html",
-    "items": [
-      "/541portfolio/2025-04-07-lab-01/index.html",
-      "/541portfolio/2025-04-14-lab-02/index.html",
-      "/541portfolio/2025-04-21-lab-03/index.html",
-      "/541portfolio/2025-04-28-lab-04/index.html",
-      "/541portfolio/2025-05-12-lab-06/index.html",
-      "/541portfolio/2025-05-19-lab-07/index.html",
-      "/541portfolio/2025-05-27-lab-08/index.html",
-      "/541portfolio/2025-06-02-lab-09/index.html"
-    ]
-  },
-  {
     "listing": "/course_projects.html",
     "items": [
       "/course_projects/2025-01-01-stat545/index.html",
@@ -28,6 +15,19 @@
       "/course_projects/2022-04-01-stat365/index.html",
       "/course_projects/2022-04-01-stat334/index.html",
       "/course_projects/2022-01-01-stat323/index.html"
+    ]
+  },
+  {
+    "listing": "/541portfolio.html",
+    "items": [
+      "/541portfolio/2025-04-07-lab-01/index.html",
+      "/541portfolio/2025-04-14-lab-02/index.html",
+      "/541portfolio/2025-04-21-lab-03/index.html",
+      "/541portfolio/2025-04-28-lab-04/index.html",
+      "/541portfolio/2025-05-12-lab-06/index.html",
+      "/541portfolio/2025-05-19-lab-07/index.html",
+      "/541portfolio/2025-05-27-lab-08/index.html",
+      "/541portfolio/2025-06-02-lab-09/index.html"
     ]
   }
 ]
