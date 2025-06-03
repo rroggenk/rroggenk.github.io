@@ -7,8 +7,29 @@ categories: [Statistics, JMP]
 image: preview-image.png
 format: html
 embed-resources: true
+resources: stat423_finalproject.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
+
+For our final project in this course, my team conducted a two-week factorial experiment to determine how varying amounts of water and plant food affected the growth of green onions. Using a rotatable central composite design (CCD) with uniform precision, we explored both main effects and interactions within a full quadratic model.
+
+Although neither factor was statistically significant at the 5% level, our response surface analysis identified optimal growth conditions at 272.43 mL of water and 5.41 g of plant food, resulting in an estimated maximum growth of 5.07 cm. Interestingly, the solution corresponded to a saddle point, emphasizing the sensitivity of green onion growth to small changes in factor levels.
+
+The project demonstrated practical application of response surface methodology and experimental design principles using JMP, while adding a creative and agricultural twist to our statistical exploration.
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](stat423_finalproject.pdf)**
+
+```{=html}
+<iframe src="stat423_finalproject.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+

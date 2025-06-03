@@ -14,18 +14,21 @@ execute:
   warning: false
 ---
 
+This was my final project for this course, where my team designed and conducted a factorial experiment to investigate how different liquids (water, Coke, Diet Coke, and 2% milk) and submersion times (12, 24, and 36 hours) affected the weight of steel nails. Using a completely randomized design and two-way ANOVA, we explored main effects and interactions but ultimately found no statistically significant differences at the 5% level. Despite this, visual and descriptive patterns suggested potential effects worth investigating further in future studies.
 
 
-```{=html}
-<iframe src="https://docs.google.com/gview?url=https://rroggenk.github.io/course_projects/2022-01-01-stat323/stat323_finalproject.pdf&embedded=true" width="100%" height="800px" style="border: none;"></iframe>
-```
 
-test1
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](stat323_finalproject.pdf)**
 
 ```{=html}
 <iframe src="stat323_finalproject.pdf" width="100%" height="800px" style="border: none;"></iframe>
-<p>If the PDF does not load, <a href="stat323_finalproject.pdf">click here to download it.</a></p> 
 ```
+
 
 
 

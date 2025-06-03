@@ -1,10 +1,87 @@
 [
   {
+    "objectID": "course_projects/2023-09-01-csc466/index.html",
+    "href": "course_projects/2023-09-01-csc466/index.html",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "",
+    "text": "For our final project, my team analyzed NFL play-by-play data to model play success and compare team strategies. We built classification models to predict whether a play would be successful based on features like down, distance, and field position. We also used k-means clustering and dimensionality reduction to group NFL teams by similar play-calling tendencies. Our findings highlighted patterns in play types by field position and provided visual team comparisons using unsupervised learning techniques.\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#final-project",
+    "href": "course_projects/2023-09-01-csc466/index.html#final-project",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "",
+    "text": "For our final project, my team analyzed NFL play-by-play data to model play success and compare team strategies. We built classification models to predict whether a play would be successful based on features like down, distance, and field position. We also used k-means clustering and dimensionality reduction to group NFL teams by similar play-calling tendencies. Our findings highlighted patterns in play types by field position and provided visual team comparisons using unsupervised learning techniques.\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-1-data-preparation-and-summarization",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-1-data-preparation-and-summarization",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 1: Data Preparation and Summarization",
+    "text": "Lab 1: Data Preparation and Summarization\nIn this lab, we explored baby name trends in the U.S. using national and state-level datasets spanning over a century. We investigated three key research questions: the influence of migration on variations of the name “John” (e.g., Jean, Jon, Juan), the regional patterns of stereotypical Southern names, and the impact of historical events—like WWII, Pearl Harbor, and 9/11—on the popularity of culturally associated names. Our analysis revealed how name data can reflect broader social, cultural, and political shifts in American history.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-2-association-rule-mining",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-2-association-rule-mining",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 2: Association Rule Mining",
+    "text": "Lab 2: Association Rule Mining\nIn this lab, we used association rule mining to uncover frequent reading patterns in fantasy literature. Using datasets including a simulated Fantasy Bingo sheet and several versions of a fantasy book bakery-style dataset, we explored support and confidence thresholds to generate and evaluate association rules. We visualized support distributions, identified skyline rules, and interpreted connections between popular authors (e.g., Gaiman, Sanderson, Bancroft). The analysis showcased how association rule mining can reveal subtle patterns in reader preferences.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-3-comparing-classification-algorithms-across-datasets",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-3-comparing-classification-algorithms-across-datasets",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 3: Comparing Classification Algorithms Across Datasets",
+    "text": "Lab 3: Comparing Classification Algorithms Across Datasets\nIn this lab, we implemented and tuned three classification algorithms—C4.5 decision trees, Random Forests, and K-Nearest Neighbors (KNN)—on four datasets: Nursery, Iris, Red Wine, and White Wine. We evaluated performance using 10-fold cross-validation and tuned hyperparameters such as decision thresholds (C4.5), number of trees (Random Forests), and k-values (KNN).\nWe found that:\n\nC4.5 performed best overall in most datasets, especially when balancing accuracy and model complexity.\nKNN achieved the highest accuracy on the Iris dataset, but was computationally expensive on the larger wine datasets.\nRandom Forests varied depending on tuning but often underperformed due to dataset size constraints.\n\nThe lab emphasized model interpretability, cross-dataset comparisons, and the computational trade-offs of different classifiers.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-4-clustering-algorithms",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-4-clustering-algorithms",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 4: Clustering Algorithms",
+    "text": "Lab 4: Clustering Algorithms\nIn this lab, we implemented and compared three clustering algorithms—K-Means, Agglomerative Hierarchical Clustering, and DBSCAN—across six unique datasets: 4-Clusters, Mammal Milk, Planets, Iris, Accidents, and a custom summary analysis.\nFor each dataset, we tuned hyperparameters (e.g., k, ε, linkage thresholds), visualized cluster quality, and evaluated performance using sum of squared errors (SSE) and outlier rates. Our findings revealed:\n\nK-Means performed best overall, consistently producing clean and interpretable groupings.\nDBSCAN excelled in some datasets but frequently flagged many points as outliers.\nHierarchical clustering generally underperformed, with especially poor results on high-variance or unevenly distributed data.\n\nThis lab showcased the practical trade-offs of unsupervised learning techniques when applied to real and synthetic datasets with varied structure.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-5-collaborative-filtering-and-recommender-systems",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-5-collaborative-filtering-and-recommender-systems",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 5: Collaborative Filtering and Recommender Systems",
+    "text": "Lab 5: Collaborative Filtering and Recommender Systems\nIn this lab, we implemented and compared six memory-based collaborative filtering techniques on the Jester jokes dataset: mean utility, weighted sum, and adjusted weighted sum—each in both user-based and item-based forms. After fine-tuning parameters and evaluating models using accuracy, precision, recall, F1, and mean absolute error, we found that the item-based adjusted weighted sum approach consistently yielded the best performance, achieving an accuracy of over 81%. This lab deepened our understanding of recommender systems and similarity-based prediction.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-6-information-retrieval-and-text-mining",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-6-information-retrieval-and-text-mining",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 6: Information Retrieval and Text Mining",
+    "text": "Lab 6: Information Retrieval and Text Mining\nIn this lab, we explored authorship attribution using the Reuters-50 dataset, which contains 5,000 news articles evenly split among 50 different authors. We applied two machine learning methods—K-Nearest Neighbors (KNN) and Random Forest classifiers—to predict article authorship based on TF-IDF representations of the text. After extensive tuning, KNN (with k = 1) significantly outperformed Random Forest, achieving 78.9% accuracy compared to 65.1%. The lab provided valuable insight into text vectorization, similarity metrics, and the challenges of modeling stylistic variation in written language.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-csc466/index.html#lab-7-pagerank-link-analysis",
+    "href": "course_projects/2023-09-01-csc466/index.html#lab-7-pagerank-link-analysis",
+    "title": "CSC 466: Knowledge Discovery from Data",
+    "section": "Lab 7: PageRank & Link Analysis",
+    "text": "Lab 7: PageRank & Link Analysis\nThis lab involved implementing the PageRank algorithm and applying it to networks from NCAA football, dolphin social interactions, and Les Misérables characters. We examined centrality scores and discussed the algorithm’s strengths and limitations in different network contexts.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-04-01-stat423/index.html",
+    "href": "course_projects/2023-04-01-stat423/index.html",
+    "title": "STAT 423: Design and Analysis of Experiments II",
+    "section": "",
+    "text": "For our final project in this course, my team conducted a two-week factorial experiment to determine how varying amounts of water and plant food affected the growth of green onions. Using a rotatable central composite design (CCD) with uniform precision, we explored both main effects and interactions within a full quadratic model.\nAlthough neither factor was statistically significant at the 5% level, our response surface analysis identified optimal growth conditions at 272.43 mL of water and 5.41 g of plant food, resulting in an estimated maximum growth of 5.07 cm. Interestingly, the solution corresponded to a saddle point, emphasizing the sensitivity of green onion growth to small changes in factor levels.\nThe project demonstrated practical application of response surface methodology and experimental design principles using JMP, while adding a creative and agricultural twist to our statistical exploration.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-01-01-stat417/index.html",
+    "href": "course_projects/2023-01-01-stat417/index.html",
+    "title": "STAT 417: Survival Analysis Methods",
+    "section": "",
+    "text": "For my final project, my team collected original data to explore what factors influence how long someone can survive while playing the game Bop It. We treated game time as a time-to-event variable and conducted both parametric and nonparametric survival analyses, as well as Cox regression modeling.\nWe found that familiarity with the game was the strongest predictor of survival time, significantly decreasing the hazard of failure. Age was also significant, with older participants having slightly higher hazard, while sex was not a significant predictor. We used Minitab and R to fit log-logistic survival models, compute Kaplan-Meier and Nelson-Aalen estimates, and evaluate proportional hazards assumptions using Schoenfeld residuals.\nOur project combined humor and rigor, and even included participation from professors—including our own, who had a personal best of 1 second.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
     "objectID": "course_projects/2022-01-01-stat323/index.html",
     "href": "course_projects/2022-01-01-stat323/index.html",
     "title": "STAT 323: Design and Analysis of Experiments I",
     "section": "",
-    "text": "test1\n\nIf the PDF does not load, click here to download it."
+    "text": "This was my final project for this course, where my team designed and conducted a factorial experiment to investigate how different liquids (water, Coke, Diet Coke, and 2% milk) and submersion times (12, 24, and 36 hours) affected the weight of steel nails. Using a completely randomized design and two-way ANOVA, we explored main effects and interactions but ultimately found no statistically significant differences at the 5% level. Despite this, visual and descriptive patterns suggested potential effects worth investigating further in future studies.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
   },
   {
     "objectID": "541portfolio.html",
@@ -264,5 +341,89 @@
     "title": "Course Projects",
     "section": "",
     "text": "This section showcases a range of projects completed throughout my undergraduate and graduate coursework in statistics, data science, and computer science. Each post corresponds to a specific course and highlights hands-on work applying analytical methods, computational tools, and statistical theory to real-world data problems.\nProjects span topics such as machine learning, generalized linear models, survival analysis, experimental design, stochastic processes, distributed computing, and statistics education. Whether developing predictive models, analyzing sequential processes, or building interactive reports, each project reflects the applied and interdisciplinary focus of my academic experience.\nClick any course below to explore the work in more detail.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDATA 403: Data Science Projects Laboratory\n\n\n\nData Science\n\n\nPython\n\n\nR\n\n\n\nProjects involving comparison of predictive and interpretable regression models, implementing linear classifiers with gradient descent, implementing neural networks from…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSC 466: Knowledge Discovery from Data\n\n\n\nComputer Science\n\n\nPython\n\n\n\nOverview of modern knowledge discovery from data (KDD) methods and technologies. Topics in data mining (association rules mining, classification, clustering), information…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 423: Design and Analysis of Experiments II\n\n\n\nStatistics\n\n\nJMP\n\n\n\n2k factorial designs, 3k factorial designs, balanced and partially balanced incomplete block designs, nested designs, split-plot designs, response surface methodology…\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 417: Survival Analysis Methods\n\n\n\nStatistics\n\n\nMinitab\n\n\n\nParametric and nonparametric methods for analyzing survival data. Topics include Kaplan-Meier and Nelson-Aalen estimates, Cox regression models, accelerated failure time…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDATA 301: Introduction to Data Science\n\n\n\nData Science\n\n\nPython\n\n\n\nIntroduction to the field of data science and the workflow of a data scientist. Types of data (tabular, textual, sparse, structured, temporal, geospatial), basic data…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 365: Statistical Communication\n\n\n\nStatistics\n\n\nR\n\n\nExcel\n\n\n\nWritten communication of statistical ideas and content. Analyze data using appropriate methods from previous statistics courses. Writing technical reports with appropriate…\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 334: Applied Linear Models\n\n\n\nStatistics\n\n\nR\n\n\n\nLinear models in algebraic and matrix form, diagnostics, transformations, polynomial models, categorical predictors, model selection, correlated errors, logistic regression.\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 323: Design and Analysis of Experiments I\n\n\n\nStatistics\n\n\nJMP\n\n\n\nPrinciples, construction and analysis of experimental designs. Completely randomized, randomized complete block, Latin squares, Graeco Latin squares, factorial, and nested…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "course_projects/2022-09-01-data301/index.html",
+    "href": "course_projects/2022-09-01-data301/index.html",
+    "title": "DATA 301: Introduction to Data Science",
+    "section": "",
+    "text": "For my final project in this course, my partner and I combined our love of travel with data science tools to explore two datasets: one on international tourism trends and another on in-flight etiquette, specifically seat reclining habits. We used public datasets from Gapminder, the World Bank, and FiveThirtyEight, and performed data cleaning, visualization, and modeling using Python (pandas).\nWe built a K-nearest neighbors model to predict whether a passenger reclines their seat based on features like height and age—ultimately improving its accuracy from 23% to 81%. We also explored an ensemble model to predict CO₂ emissions based on tourism-related variables. While our models revealed limitations, the project strengthened our skills in data wrangling, visualization, and machine learning—while having a lot of fun along the way.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-data403/index.html",
+    "href": "course_projects/2023-09-01-data403/index.html",
+    "title": "DATA 403: Data Science Projects Laboratory",
+    "section": "",
+    "text": "For Client A, “Booze ‘R’ Us,” we developed a sales forecasting model using liquor purchase data from Iowa. By modeling sales through proxies such as total bottle cost and aggregating by alcohol category and time variables, we aimed to help the client assess their financial readiness for expansion. We evaluated models including OLS regression, ridge regression, and gradient descent with Log-Cosh loss, and validated performance using both standard and time-series cross-validation. Our approach demonstrated strong predictive capability, especially when applied to a specific store’s purchase.\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-data403/index.html#project-1a-booze-r-us-sales-forecasting",
+    "href": "course_projects/2023-09-01-data403/index.html#project-1a-booze-r-us-sales-forecasting",
+    "title": "DATA 403: Data Science Projects Laboratory",
+    "section": "",
+    "text": "For Client A, “Booze ‘R’ Us,” we developed a sales forecasting model using liquor purchase data from Iowa. By modeling sales through proxies such as total bottle cost and aggregating by alcohol category and time variables, we aimed to help the client assess their financial readiness for expansion. We evaluated models including OLS regression, ridge regression, and gradient descent with Log-Cosh loss, and validated performance using both standard and time-series cross-validation. Our approach demonstrated strong predictive capability, especially when applied to a specific store’s purchase.\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-data403/index.html#project-1b-alcohol-purchase-patterns-in-iowa",
+    "href": "course_projects/2023-09-01-data403/index.html#project-1b-alcohol-purchase-patterns-in-iowa",
+    "title": "DATA 403: Data Science Projects Laboratory",
+    "section": "Project 1B: Alcohol Purchase Patterns in Iowa",
+    "text": "Project 1B: Alcohol Purchase Patterns in Iowa\nIn Project 1B, we worked with Client B, “Drinking Excess Alcohol is Dangerous (DEAD),” to uncover key trends in alcohol purchasing behavior across Iowa. Using vendor-level purchase data, we constructed models to identify seasonal, categorical, and weekday patterns influencing alcohol inventory decisions. Our analysis leveraged robust methods like ridge and elastic net regression to account for variability and outliers. This allowed us to highlight which variables most reliably drove inventory changes and could inform public health insights or targeted interventions.\n\nProject Proposal\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\nReport\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\nSlides\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2023-09-01-data403/index.html#project-2-predicting-loan-default-for-homecredit",
+    "href": "course_projects/2023-09-01-data403/index.html#project-2-predicting-loan-default-for-homecredit",
+    "title": "DATA 403: Data Science Projects Laboratory",
+    "section": "Project 2: Predicting Loan Default for HomeCredit",
+    "text": "Project 2: Predicting Loan Default for HomeCredit\nFor this project, we acted as consultants for HomeCredit Group, building a classifier to predict whether a loan applicant would repay their loan. Using Kaggle’s Home Credit Default Risk dataset, we engineered features from applicant demographics, financials, and loan details. We compared logistic regression, support vector machines, and linear discriminant analysis, ultimately selecting logistic regression for its balance between interpretability and performance. We also evaluated fairness metrics across demographic subgroups to ensure responsible modeling.\n\nProject Proposal\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\nReport\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\nSlides\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat365/index.html",
+    "href": "course_projects/2022-04-01-stat365/index.html",
+    "title": "STAT 365: Statistical Communication",
+    "section": "",
+    "text": "This report explores gender differences in fear of walking alone at night using data from the General Social Survey (GSS). Through descriptive statistics and hypothesis testing, I found that while overall fear levels haven’t significantly changed from 1973 to 2021, women consistently report higher fear than men. I used R for all analysis and visualizations and concluded with a discussion on how society can address safety concerns more effectively.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat365/index.html#final-project-fear-of-walking-alone",
+    "href": "course_projects/2022-04-01-stat365/index.html#final-project-fear-of-walking-alone",
+    "title": "STAT 365: Statistical Communication",
+    "section": "",
+    "text": "This report explores gender differences in fear of walking alone at night using data from the General Social Survey (GSS). Through descriptive statistics and hypothesis testing, I found that while overall fear levels haven’t significantly changed from 1973 to 2021, women consistently report higher fear than men. I used R for all analysis and visualizations and concluded with a discussion on how society can address safety concerns more effectively.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat365/index.html#midterm-project-anchoring-effect-and-nelson-mandelas-age",
+    "href": "course_projects/2022-04-01-stat365/index.html#midterm-project-anchoring-effect-and-nelson-mandelas-age",
+    "title": "STAT 365: Statistical Communication",
+    "section": "Midterm Project: Anchoring Effect and Nelson Mandela’s Age",
+    "text": "Midterm Project: Anchoring Effect and Nelson Mandela’s Age\nThis analysis investigated the anchoring effect by asking students to guess Nelson Mandela’s age at death after being shown either a low or high “anchor” value. Using randomized assignment and statistical tests, we found that students shown the high anchor provided significantly higher guesses. This project allowed me to communicate cognitive bias results through both visuals and statistical arguments using tidyverse in R.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat365/index.html#infographic-new-malaria-vaccine",
+    "href": "course_projects/2022-04-01-stat365/index.html#infographic-new-malaria-vaccine",
+    "title": "STAT 365: Statistical Communication",
+    "section": "Infographic: New Malaria Vaccine",
+    "text": "Infographic: New Malaria Vaccine\nDesigned to quickly inform a general audience, this infographic highlights the safety, efficacy, and benefits of the R21/MM malaria vaccine tested in Burkina Faso. I emphasized visual clarity and conciseness to communicate key study outcomes and real-world relevance of the most effective malaria vaccine to date.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat365/index.html#infographic-gsk-science-in-summer-program-evaluation",
+    "href": "course_projects/2022-04-01-stat365/index.html#infographic-gsk-science-in-summer-program-evaluation",
+    "title": "STAT 365: Statistical Communication",
+    "section": "Infographic: GSK Science in Summer Program Evaluation",
+    "text": "Infographic: GSK Science in Summer Program Evaluation\nThis infographic summarizes findings from an evaluation of a science outreach program delivered through museums and partner sites. It communicates the program’s successes and challenges, including student engagement rates and implementation logistics, in a format tailored for stakeholders in educational outreach.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat365/index.html#infographic-fear-of-walking-alone-by-gender",
+    "href": "course_projects/2022-04-01-stat365/index.html#infographic-fear-of-walking-alone-by-gender",
+    "title": "STAT 365: Statistical Communication",
+    "section": "Infographic: Fear of Walking Alone by Gender",
+    "text": "Infographic: Fear of Walking Alone by Gender\nUsing GSS data, this graphic shows the persistent gender gap in safety perceptions when walking alone at night. While the overall rates of fear have stayed relatively stable over time, women consistently report much higher levels of fear than men. I designed this infographic to raise awareness of a long-standing social issue and support evidence-based advocacy.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2022-04-01-stat334/index.html",
+    "href": "course_projects/2022-04-01-stat334/index.html",
+    "title": "STAT 334: Applied Linear Models",
+    "section": "",
+    "text": "This was my final project for this course, where my team developed a multiple linear regression model to investigate the key predictors of home sale prices in San Luis Obispo. We manually collected data on 144 recently sold properties and examined a variety of numerical and categorical variables, including square footage, lot size, and home type. After variable selection, data transformation, and model diagnostics, we identified square footage, lot size, and home type as the most significant predictors.\nOur professor, Dr. Bret Holladay, was so impressed with our work that he asked to use it as a sample project for future STAT 334 courses. To this day, it continues to be shared as an example of an outstanding final report.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
   }
 ]

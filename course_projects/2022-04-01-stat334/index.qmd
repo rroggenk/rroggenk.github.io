@@ -7,9 +7,27 @@ categories: [Statistics, R]
 image: preview-image.png
 format: html
 embed-resources: true
+resources: stat334_project.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
+
+This was my final project for this course, where my team developed a multiple linear regression model to investigate the key predictors of home sale prices in San Luis Obispo. We manually collected data on 144 recently sold properties and examined a variety of numerical and categorical variables, including square footage, lot size, and home type. After variable selection, data transformation, and model diagnostics, we identified square footage, lot size, and home type as the most significant predictors.
+
+Our professor, Dr. Bret Holladay, was so impressed with our work that he asked to use it as a sample project for future STAT 334 courses. To this day, it continues to be shared as an example of an outstanding final report.
+
+
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](stat334_project.pdf)**
+
+```{=html}
+<iframe src="stat334_project.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
 

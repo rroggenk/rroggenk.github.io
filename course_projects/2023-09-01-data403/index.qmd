@@ -7,8 +7,150 @@ categories: [Data Science, Python, R]
 image: preview-image.jpeg
 format: html
 embed-resources: true
+resources: 
+  - Project1A_Proposal.pdf
+  - Project1A_Report.pdf
+  - Project1A_Slides.pdf
+  - Project1B_Proposal.pdf
+  - Project1B_Report.pdf
+  - Project1B_Slides.pdf
+  - Project2_Proposal.pdf
+  - Project2_Report.pdf
+  - Project2_Slides.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
+
+## Project 1A: Booze ‘R’ Us Sales Forecasting
+
+For Client A, "Booze ‘R’ Us," we developed a sales forecasting model using liquor purchase data from Iowa. By modeling sales through proxies such as total bottle cost and aggregating by alcohol category and time variables, we aimed to help the client assess their financial readiness for expansion. We evaluated models including OLS regression, ridge regression, and gradient descent with Log-Cosh loss, and validated performance using both standard and time-series cross-validation. Our approach demonstrated strong predictive capability, especially when applied to a specific store's purchase.
+
+### Project Proposal 
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project1A_Proposal.pdf)**
+
+```{=html}
+<iframe src="Project1A_Proposal.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+### Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project1A_Report.pdf)**
+
+```{=html}
+<iframe src="Project1A_Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+### Slides
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project1A_Slides.pdf)**
+
+```{=html}
+<iframe src="Project1A_Slides.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+## Project 1B: Alcohol Purchase Patterns in Iowa
+
+In Project 1B, we worked with Client B, "Drinking Excess Alcohol is Dangerous (DEAD)," to uncover key trends in alcohol purchasing behavior across Iowa. Using vendor-level purchase data, we constructed models to identify seasonal, categorical, and weekday patterns influencing alcohol inventory decisions. Our analysis leveraged robust methods like ridge and elastic net regression to account for variability and outliers. This allowed us to highlight which variables most reliably drove inventory changes and could inform public health insights or targeted interventions.
+
+### Project Proposal 
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project1B_Proposal.pdf)**
+
+```{=html}
+<iframe src="Project1B_Proposal.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+### Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project1B_Report.pdf)**
+
+```{=html}
+<iframe src="Project1B_Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+### Slides
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project1B_Slides.pdf)**
+
+```{=html}
+<iframe src="Project1B_Slides.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+
+## Project 2: Predicting Loan Default for HomeCredit
+For this project, we acted as consultants for HomeCredit Group, building a classifier to predict whether a loan applicant would repay their loan. Using Kaggle’s Home Credit Default Risk dataset, we engineered features from applicant demographics, financials, and loan details. We compared logistic regression, support vector machines, and linear discriminant analysis, ultimately selecting logistic regression for its balance between interpretability and performance. We also evaluated fairness metrics across demographic subgroups to ensure responsible modeling. 
+
+### Project Proposal 
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project2_Proposal.pdf)**
+
+```{=html}
+<iframe src="Project2_Proposal.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+### Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project2_Report.pdf)**
+
+```{=html}
+<iframe src="Project2_Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+### Slides
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project2_Slides.pdf)**
+
+```{=html}
+<iframe src="Project2_Slides.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+
+

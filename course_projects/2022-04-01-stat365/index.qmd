@@ -7,9 +7,94 @@ categories: [Statistics, R, Excel]
 image: preview-image.png
 format: html
 embed-resources: true
+resources:
+  - MidtermProject_Report.pdf
+  - FinalProject_Report.pdf
+  - infographic_malaria.pdf
+  - infographic_science.pdf
+  - infographic_women.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
+
+## Final Project: *Fear of Walking Alone*
+
+This report explores gender differences in fear of walking alone at night using data from the General Social Survey (GSS). Through descriptive statistics and hypothesis testing, I found that while overall fear levels haven’t significantly changed from 1973 to 2021, women consistently report higher fear than men. I used R for all analysis and visualizations and concluded with a discussion on how society can address safety concerns more effectively.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](FinalProject_Report.pdf)**
+
+```{=html}
+<iframe src="FinalProject_Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Midterm Project: *Anchoring Effect and Nelson Mandela's Age*
+
+This analysis investigated the anchoring effect by asking students to guess Nelson Mandela’s age at death after being shown either a low or high "anchor" value. Using randomized assignment and statistical tests, we found that students shown the high anchor provided significantly higher guesses. This project allowed me to communicate cognitive bias results through both visuals and statistical arguments using tidyverse in R.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](MidtermProject_Report.pdf)**
+
+```{=html}
+<iframe src="MidtermProject_Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Infographic: *New Malaria Vaccine*
+
+Designed to quickly inform a general audience, this infographic highlights the safety, efficacy, and benefits of the R21/MM malaria vaccine tested in Burkina Faso. I emphasized visual clarity and conciseness to communicate key study outcomes and real-world relevance of the most effective malaria vaccine to date.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](infographic_malaria.pdf)**
+
+```{=html}
+<iframe src="infographic_malaria.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Infographic: *GSK Science in Summer Program Evaluation*
+
+This infographic summarizes findings from an evaluation of a science outreach program delivered through museums and partner sites. It communicates the program’s successes and challenges, including student engagement rates and implementation logistics, in a format tailored for stakeholders in educational outreach.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](infographic_science.pdf)**
+
+```{=html}
+<iframe src="infographic_science.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Infographic: *Fear of Walking Alone by Gender*
+
+Using GSS data, this graphic shows the persistent gender gap in safety perceptions when walking alone at night. While the overall rates of fear have stayed relatively stable over time, women consistently report much higher levels of fear than men. I designed this infographic to raise awareness of a long-standing social issue and support evidence-based advocacy.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](infographic_women.pdf)**
+
+```{=html}
+<iframe src="infographic_women.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
 

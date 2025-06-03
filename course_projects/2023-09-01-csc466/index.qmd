@@ -7,8 +7,182 @@ categories: [Computer Science, Python]
 image: preview-image.jpeg
 format: html
 embed-resources: true
+resources: 
+  - 466_finalpresentation.pdf
+  - 466_finalreport.pdf
+  - Lab1-report.pdf
+  - Lab2-report.pdf
+  - Lab3-report.pdf
+  - Lab4-report.pdf
+  - Lab5-report.pdf
+  - Lab6-report.pdf
+  - Lab7-report.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
+
+
+## Final Project
+For our final project, my team analyzed NFL play-by-play data to model play success and compare team strategies. We built classification models to predict whether a play would be successful based on features like down, distance, and field position. We also used k-means clustering and dimensionality reduction to group NFL teams by similar play-calling tendencies. Our findings highlighted patterns in play types by field position and provided visual team comparisons using unsupervised learning techniques.
+
+### Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](466_finalreport.pdf)**
+
+```{=html}
+<iframe src="466_finalreport.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+### Presentation Slides
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](466_finalpresentation.pdf)**
+
+```{=html}
+<iframe src="466_finalpresentation.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+
+## Lab 1: Data Preparation and Summarization
+
+In this lab, we explored baby name trends in the U.S. using national and state-level datasets spanning over a century. We investigated three key research questions: the influence of migration on variations of the name “John” (e.g., Jean, Jon, Juan), the regional patterns of stereotypical Southern names, and the impact of historical events—like WWII, Pearl Harbor, and 9/11—on the popularity of culturally associated names. Our analysis revealed how name data can reflect broader social, cultural, and political shifts in American history.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab1-report.pdf)**
+
+```{=html}
+<iframe src="Lab1-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Lab 2: Association Rule Mining
+
+In this lab, we used association rule mining to uncover frequent reading patterns in fantasy literature. Using datasets including a simulated Fantasy Bingo sheet and several versions of a fantasy book bakery-style dataset, we explored support and confidence thresholds to generate and evaluate association rules. We visualized support distributions, identified skyline rules, and interpreted connections between popular authors (e.g., Gaiman, Sanderson, Bancroft). The analysis showcased how association rule mining can reveal subtle patterns in reader preferences.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab2-report.pdf)**
+
+```{=html}
+<iframe src="Lab2-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+## Lab 3: Comparing Classification Algorithms Across Datasets
+
+In this lab, we implemented and tuned three classification algorithms—C4.5 decision trees, Random Forests, and K-Nearest Neighbors (KNN)—on four datasets: Nursery, Iris, Red Wine, and White Wine. We evaluated performance using 10-fold cross-validation and tuned hyperparameters such as decision thresholds (C4.5), number of trees (Random Forests), and k-values (KNN).
+
+We found that:
+
+- C4.5 performed best overall in most datasets, especially when balancing accuracy and model complexity.
+
+- KNN achieved the highest accuracy on the Iris dataset, but was computationally expensive on the larger wine datasets.
+
+- Random Forests varied depending on tuning but often underperformed due to dataset size constraints.
+
+The lab emphasized model interpretability, cross-dataset comparisons, and the computational trade-offs of different classifiers.
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab3-report.pdf)**
+
+```{=html}
+<iframe src="Lab3-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+## Lab 4: Clustering Algorithms
+
+In this lab, we implemented and compared three clustering algorithms—K-Means, Agglomerative Hierarchical Clustering, and DBSCAN—across six unique datasets: 4-Clusters, Mammal Milk, Planets, Iris, Accidents, and a custom summary analysis.
+
+For each dataset, we tuned hyperparameters (e.g., k, ε, linkage thresholds), visualized cluster quality, and evaluated performance using sum of squared errors (SSE) and outlier rates. Our findings revealed:
+
+- K-Means performed best overall, consistently producing clean and interpretable groupings.
+
+- DBSCAN excelled in some datasets but frequently flagged many points as outliers.
+
+- Hierarchical clustering generally underperformed, with especially poor results on high-variance or unevenly distributed data.
+
+This lab showcased the practical trade-offs of unsupervised learning techniques when applied to real and synthetic datasets with varied structure.
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab4-report.pdf)**
+
+```{=html}
+<iframe src="Lab4-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+## Lab 5: Collaborative Filtering and Recommender Systems
+
+In this lab, we implemented and compared six memory-based collaborative filtering techniques on the Jester jokes dataset: mean utility, weighted sum, and adjusted weighted sum—each in both user-based and item-based forms. After fine-tuning parameters and evaluating models using accuracy, precision, recall, F1, and mean absolute error, we found that the item-based adjusted weighted sum approach consistently yielded the best performance, achieving an accuracy of over 81%. This lab deepened our understanding of recommender systems and similarity-based prediction.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab5-report.pdf)**
+
+```{=html}
+<iframe src="Lab5-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Lab 6: Information Retrieval and Text Mining
+
+In this lab, we explored authorship attribution using the Reuters-50 dataset, which contains 5,000 news articles evenly split among 50 different authors. We applied two machine learning methods—K-Nearest Neighbors (KNN) and Random Forest classifiers—to predict article authorship based on TF-IDF representations of the text. After extensive tuning, KNN (with k = 1) significantly outperformed Random Forest, achieving 78.9% accuracy compared to 65.1%. The lab provided valuable insight into text vectorization, similarity metrics, and the challenges of modeling stylistic variation in written language.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab6-report.pdf)**
+
+```{=html}
+<iframe src="Lab6-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+## Lab 7: PageRank & Link Analysis
+
+This lab involved implementing the PageRank algorithm and applying it to networks from NCAA football, dolphin social interactions, and Les Misérables characters. We examined centrality scores and discussed the algorithm’s strengths and limitations in different network contexts.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Lab7-report.pdf)**
+
+```{=html}
+<iframe src="Lab7-report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+
+
+

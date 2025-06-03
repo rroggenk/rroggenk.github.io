@@ -7,9 +7,26 @@ categories: [Statistics, Minitab]
 image: preview-image.jpg
 format: html
 embed-resources: true
+resources: bop to the top.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
 
+For my final project, my team collected original data to explore what factors influence how long someone can survive while playing the game Bop It. We treated game time as a time-to-event variable and conducted both parametric and nonparametric survival analyses, as well as Cox regression modeling.
+
+We found that familiarity with the game was the strongest predictor of survival time, significantly decreasing the hazard of failure. Age was also significant, with older participants having slightly higher hazard, while sex was not a significant predictor. We used Minitab and R to fit log-logistic survival models, compute Kaplan-Meier and Nelson-Aalen estimates, and evaluate proportional hazards assumptions using Schoenfeld residuals.
+
+Our project combined humor and rigor, and even included participation from professors—including our own, who had a personal best of 1 second.
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](bop to the top.pdf)**
+
+```{=html}
+<iframe src="bop to the top.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```

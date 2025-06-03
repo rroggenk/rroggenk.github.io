@@ -7,9 +7,27 @@ categories: [Data Science, Python]
 image: preview-image.png
 format: html
 embed-resources: true
+resources: DATA301_TravelFinalPresentation.pdf
 editor: source
 execute: 
   echo: true
   warning: false
 ---
+
+For my final project in this course, my partner and I combined our love of travel with data science tools to explore two datasets: one on international tourism trends and another on in-flight etiquette, specifically seat reclining habits. We used public datasets from Gapminder, the World Bank, and FiveThirtyEight, and performed data cleaning, visualization, and modeling using Python (pandas).
+
+We built a K-nearest neighbors model to predict whether a passenger reclines their seat based on features like height and age—ultimately improving its accuracy from 23% to 81%. We also explored an ensemble model to predict CO₂ emissions based on tourism-related variables. While our models revealed limitations, the project strengthened our skills in data wrangling, visualization, and machine learning—while having a lot of fun along the way.
+
+
+
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](DATA301_TravelFinalPresentation.pdf)**
+
+```{=html}
+<iframe src="DATA301_TravelFinalPresentation.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
 
