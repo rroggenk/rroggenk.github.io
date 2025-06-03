@@ -21,42 +21,38 @@ For our final project in STAT 551, my team partnered with the American College o
 
 We began with exploratory analysis to understand gender imbalances and relationships between key clinical variables and diagnoses. Our models included logistic regression with LASSO regularization, support vector machines, and k-nearest neighbors. We evaluated model performance with ROC-AUC, sensitivity, and confusion matrices, prioritizing both accuracy and fairness. Ultimately, our approach demonstrated high sensitivity and strong predictive power, especially on the cardiovascular and early-stage diabetes datasets. The final deliverables included a comprehensive report, poster, and reflections, all highlighting the potential of data science to support fair and early medical intervention.
 
-
-## Project Proposal 
+## Project Proposal
 
 **Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
 
-- Opening this page in **Safari** or **Firefox**, or  
+-   Opening this page in **Safari** or **Firefox**, or
 
-- **[Click here to download the PDF](project_proposal.pdf)**
+-   [**Click here to download the PDF**](project_proposal.pdf)
 
 ```{=html}
 <iframe src="project_proposal.pdf" width="100%" height="800px" style="border: none;"></iframe>
 ```
 
-
 ## Poster
 
 **Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
 
-- Opening this page in **Safari** or **Firefox**, or  
+-   Opening this page in **Safari** or **Firefox**, or
 
-- **[Click here to download the PDF](stat_551_poster_final.pdf)**
+-   [**Click here to download the PDF**](stat_551_poster_final.pdf)
 
 ```{=html}
 <iframe src="stat_551_poster_final.pdf" width="100%" height="700px" style="border: none;"></iframe>
 ```
 
-
 ## Reflection
 
 **Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
 
-- Opening this page in **Safari** or **Firefox**, or  
+-   Opening this page in **Safari** or **Firefox**, or
 
-- **[Click here to download the PDF](reflection_phase2.pdf)**
+-   [**Click here to download the PDF**](reflection_phase2.pdf)
 
 ```{=html}
 <iframe src="reflection_phase2.pdf" width="100%" height="800px" style="border: none;"></iframe>
 ```
-

@@ -14,9 +14,6 @@ execute:
   warning: false
 ---
 
-
-
-
 <!-- **Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try: -->
 
 <!-- - Opening this page in **Safari** or **Firefox**, or   -->
@@ -24,5 +21,7 @@ execute:
 <!-- - **[Click here to download the PDF](project_proposal.pdf)** -->
 
 <!-- ```{=html} -->
+
 <!-- <iframe src="project_proposal.pdf" width="100%" height="800px" style="border: none;"></iframe> -->
+
 <!-- ``` -->

@@ -1,0 +1,28 @@
+---
+title: "Data Science Capstone: Applying Computer Vision to Geo-Locate Imagery"
+format: html
+---
+
+Human trafficking is a global crisis, affecting approximately 21 million victims and generating an estimated $50 billion in illicit revenue each year. Despite the severity of the issue, fewer than 50,000 victims are identified annually. To address this, our team engaged in a consulting project with the Global Emancipation Network (GEN), a 501(c)(3) organization dedicated to disrupting human trafficking networks worldwide.
+
+Collaborating closely with Sherrie Caltagirone, the Founder and Executive Director of GEN, we applied cutting-edge AI technologies, including Meta AI’s Segment Anything Model (SAM) and OpenAI’s Contrastive Language-Image Pretraining (CLIP) model, to predict the origin of photographs used in trafficking operations. We implemented Zero Shot Instance Segmentation to identify and label objects within these images, providing a deeper understanding of the models' predictions.
+
+Our work not only enhances the accuracy of location predictions but also offers transparency by explaining the factors that influence these predictions. This approach empowers GEN to more effectively identify and locate victims, significantly contributing to their mission of combating human trafficking on a global scale.
+
+
+## Poster
+
+<iframe src="ds_capstone/poster.pdf" width="100%" height="800px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="ds_capstone/poster.pdf">Download the PDF</a>.</p>
+
+</iframe>
+
+
+## Report
+
+<iframe src="ds_capstone/report.pdf" width="100%" height="800px" style="border: none;">
+
+<p>Your browser does not support PDFs. <a href="ds_capstone/report.pdf">Download the PDF</a>.</p>
+
+</iframe>

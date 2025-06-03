@@ -530,5 +530,26 @@
     "title": "STAT 550: Generalized Linear Models",
     "section": "Appendix",
     "text": "Appendix\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "ds_capstone.html",
+    "href": "ds_capstone.html",
+    "title": "Data Science Capstone: Applying Computer Vision to Geo-Locate Imagery",
+    "section": "",
+    "text": "Human trafficking is a global crisis, affecting approximately 21 million victims and generating an estimated $50 billion in illicit revenue each year. Despite the severity of the issue, fewer than 50,000 victims are identified annually. To address this, our team engaged in a consulting project with the Global Emancipation Network (GEN), a 501(c)(3) organization dedicated to disrupting human trafficking networks worldwide.\nCollaborating closely with Sherrie Caltagirone, the Founder and Executive Director of GEN, we applied cutting-edge AI technologies, including Meta AI’s Segment Anything Model (SAM) and OpenAI’s Contrastive Language-Image Pretraining (CLIP) model, to predict the origin of photographs used in trafficking operations. We implemented Zero Shot Instance Segmentation to identify and label objects within these images, providing a deeper understanding of the models’ predictions.\nOur work not only enhances the accuracy of location predictions but also offers transparency by explaining the factors that influence these predictions. This approach empowers GEN to more effectively identify and locate victims, significantly contributing to their mission of combating human trafficking on a global scale."
+  },
+  {
+    "objectID": "ds_capstone.html#poster",
+    "href": "ds_capstone.html#poster",
+    "title": "Data Science Capstone: Applying Computer Vision to Geo-Locate Imagery",
+    "section": "Poster",
+    "text": "Poster\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"ds_capstone/poster.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "ds_capstone.html#report",
+    "href": "ds_capstone.html#report",
+    "title": "Data Science Capstone: Applying Computer Vision to Geo-Locate Imagery",
+    "section": "Report",
+    "text": "Report\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"ds_capstone/report.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
   }
 ]

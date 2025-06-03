@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research: Negative Hypergeometric Confidence Intervals – Rachel Roggenkemper</title>
+<title>Data Science Capstone: Applying Computer Vision to Geo-Locate Imagery – Rachel Roggenkemper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,11 +99,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./nhg_ci.html" aria-current="page"> 
-<span class="menu-text">Negative Hypergeometric CIs</span></a>
+    <a class="nav-link" href="./nhg_ci.html"> 
+<span class="menu-text">NHG CIs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./nhg_ci.html"> 
+    <a class="nav-link active" href="./ds_capstone.html" aria-current="page"> 
 <span class="menu-text">Data Science Capstone</span></a>
   </li>  
   <li class="nav-item">
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./stat_ed_frost.html"> 
-<span class="menu-text">Statistics Education Research</span></a>
+<span class="menu-text">Statistics Education</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./541portfolio.html"> 
@@ -156,9 +156,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#thesis-presentation-slides" id="toc-thesis-presentation-slides" class="nav-link active" data-scroll-target="#thesis-presentation-slides">Thesis Presentation Slides</a></li>
-  <li><a href="#frost-surp-poster" id="toc-frost-surp-poster" class="nav-link" data-scroll-target="#frost-surp-poster">Frost SURP Poster</a></li>
-  <li><a href="#frost-surp-slides" id="toc-frost-surp-slides" class="nav-link" data-scroll-target="#frost-surp-slides">Frost SURP Slides</a></li>
+  <li><a href="#poster" id="toc-poster" class="nav-link active" data-scroll-target="#poster">Poster</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report">Report</a></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research: Negative Hypergeometric Confidence Intervals</h1>
+<h1 class="title">Data Science Capstone: Applying Computer Vision to Geo-Locate Imagery</h1>
 </div>
 
 
@@ -184,32 +183,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Beginning in Spring 2022, I conducted research on short exact confidence intervals for the parameters of the negative hypergeometric (NHG) distribution. I started this work during my undergraduate studies and continued it through the summer as part of the Frost Summer Undergraduate Research Program (SURP), where I collaborated with Hannah Pawig, who focused on confidence intervals for the Poisson distribution. I later expanded this work into my master’s thesis.</p>
-<p>Under the mentorship of Dr.&nbsp;Bret Holladay, I developed multiple algorithms to construct optimal confidence intervals for the NHG distribution—intervals that are both valid and more precise than commonly used methods. This work addressed shortcomings in existing approaches, such as undercoverage and overly conservative intervals. To improve accessibility, I created a Shiny app and developed an R package for practitioners and researchers. Dr.&nbsp;Holladay and I are now in the process of preparing a manuscript for submission to a peer-reviewed journal, and my thesis is currently being published through the university.</p>
-<section id="thesis-presentation-slides" class="level2">
-<h2 class="anchored" data-anchor-id="thesis-presentation-slides">Thesis Presentation Slides</h2>
-<p>These slides were part of my public master’s thesis presentation. They introduce the NHG distribution and its applications (such as estimating population size via capture-recapture), and describe the motivation, methodology, and comparative performance of the new confidence interval procedures I developed. The presentation concludes with a demo of the Shiny app and R package.</p>
-<iframe src="nhg_ci/ThesisPresentation.pdf" width="100%" height="600px" style="border: none;">
+<p>Human trafficking is a global crisis, affecting approximately 21 million victims and generating an estimated $50 billion in illicit revenue each year. Despite the severity of the issue, fewer than 50,000 victims are identified annually. To address this, our team engaged in a consulting project with the Global Emancipation Network (GEN), a 501(c)(3) organization dedicated to disrupting human trafficking networks worldwide.</p>
+<p>Collaborating closely with Sherrie Caltagirone, the Founder and Executive Director of GEN, we applied cutting-edge AI technologies, including Meta AI’s Segment Anything Model (SAM) and OpenAI’s Contrastive Language-Image Pretraining (CLIP) model, to predict the origin of photographs used in trafficking operations. We implemented Zero Shot Instance Segmentation to identify and label objects within these images, providing a deeper understanding of the models’ predictions.</p>
+<p>Our work not only enhances the accuracy of location predictions but also offers transparency by explaining the factors that influence these predictions. This approach empowers GEN to more effectively identify and locate victims, significantly contributing to their mission of combating human trafficking on a global scale.</p>
+<section id="poster" class="level2">
+<h2 class="anchored" data-anchor-id="poster">Poster</h2>
+<iframe src="ds_capstone/poster.pdf" width="100%" height="800px" style="border: none;">
 <p>
-Your browser does not support PDFs. <a href="nhg_ci/ThesisPresentation.pdf">Download the PDF</a>.
+Your browser does not support PDFs. <a href="ds_capstone/poster.pdf">Download the PDF</a>.
 </p>
 </iframe>
 </section>
-<section id="frost-surp-poster" class="level2">
-<h2 class="anchored" data-anchor-id="frost-surp-poster">Frost SURP Poster</h2>
-<p>This poster summarized the research Hannah and I conducted during the FROST summer program. It outlined the limitations of existing confidence interval methods for discrete distributions, introduced the Conditional Minimal Cardinality (CMC) method, and showcased our comparative results. It also emphasized our efforts to make these tools accessible through interactive Shiny apps and open-source code. Out of ten FROST research teams, we were one of two teams selected to represent the program at a college-wide research symposium. We also presented this poster at an additional university-wide research conference, sharing our work with a broader academic audience.</p>
-<iframe src="nhg_ci/Frost_SURP_Discrete_CI_2025_Poster.pdf" width="100%" height="750px" style="border: none;">
+<section id="report" class="level2">
+<h2 class="anchored" data-anchor-id="report">Report</h2>
+<iframe src="ds_capstone/report.pdf" width="100%" height="800px" style="border: none;">
 <p>
-Your browser does not support PDFs. <a href="nhg_ci/Frost_SURP_Discrete_CI_2025_Poster.pdf">Download the PDF</a>.
-</p>
-</iframe>
-</section>
-<section id="frost-surp-slides" class="level2">
-<h2 class="anchored" data-anchor-id="frost-surp-slides">Frost SURP Slides</h2>
-<p>These slides accompanied the joint presentation Hannah and I gave at the conclusion of our summer research. We presented them at the Statistics Department Summer Research Showcase, where we shared the motivation, methodology, and applications of our work with faculty and peers. The slides highlight the importance of accessible statistical tools, including our development of Shiny apps for both Poisson and NHG distributions, and outline our future goals of publishing the methods and finalizing the R package.</p>
-<iframe src="nhg_ci/Frost_SURP_Discrete_CI_2025_Slides.pdf" width="100%" height="600px" style="border: none;">
-<p>
-Your browser does not support PDFs. <a href="nhg_ci/Frost_SURP_Discrete_CI_2025_Slides.pdf">Download the PDF</a>.
+Your browser does not support PDFs. <a href="ds_capstone/report.pdf">Download the PDF</a>.
 </p>
 </iframe>
 
