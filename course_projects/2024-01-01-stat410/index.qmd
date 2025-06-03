@@ -1,0 +1,117 @@
+---
+title: "STAT 410: Statistics Education: Pedagogy, Content, Technology, and Assessment"
+description: "Topics related to content, pedagogy, technology, and assessment for teaching statistics in grades 6-16 in accordance with current standards and research for teaching statistics including the Common Core State Standards for Mathematics."
+author: "Rachel Roggenkemper"
+date: "01-01-2024"
+categories: [Statistics]
+image: preview-image.jpg
+format: html
+embed-resources: true
+resources: 
+  - BookPresentation.pdf
+  - ClassroomObservation.pdf
+  - LecturePresentationProbabilityWorksheet.pdf
+  - LessonPlan.pdf
+  - LessonPlanPresentationSlides.pdf
+  - SOLUTIONS_LecturePresentationProbabilityWorksheet.pdf
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+## Lesson Plan Project 
+
+As part of a team, I developed and taught an introductory probability lesson tailored for a 7th-grade math class. This lesson was designed around Common Core Standard 7.SP.C.5 and emphasized conceptual understanding through interactive group activities, ranking exercises, and guided practice on probability scenarios. Special focus was placed on addressing student misconceptions such as equiprobability and ratio misinterpretation, grounded in research by Shaughnessy. The project included a detailed lesson plan, a classroom-ready slide presentation, a student worksheet, and corresponding solution key. 
+
+### Presentation Slides
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](LessonPlanPresentationSlides.pdf)**
+
+```{=html}
+<iframe src="LessonPlanPresentationSlides.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+
+### Worksheet
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](LecturePresentationProbabilityWorksheet.pdf)**
+
+```{=html}
+<iframe src="LecturePresentationProbabilityWorksheet.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+### Solution Key to Worksheet
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](SOLUTIONS_LecturePresentationProbabilityWorksheet.pdf)**
+
+```{=html}
+<iframe src="SOLUTIONS_LecturePresentationProbabilityWorksheet.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+### Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](LessonPlan.pdf)**
+
+```{=html}
+<iframe src="LessonPlan.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+
+## Book Presentation 
+
+I led a presentation based on Developing Essential Understandings of Statistics: Grades 6–8, focusing on how students build understanding of sample, population, and sampling distributions. We created activities and examples, including one set in the world of *The Hunger Games*, to explore how inferential statistics link sample data to population insights. We also emphasized the distinction between different types of distributions and facilitated knowledge checks to reinforce these concepts.
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](BookPresentation.pdf)**
+
+```{=html}
+<iframe src="BookPresentation.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+## Classroom Observation
+
+I observed an undergraduate introductory statistics course (STAT 217 at Cal Poly) to analyze pedagogical practices in action. The observed lesson focused on confidence intervals and hypothesis testing, with an emphasis on interpretation over computation. I noted the instructor’s use of collaborative group work, real-world examples, and context-driven teaching. The experience was evaluated in light of both the GAISE Report’s learning goals and Jessica Utts’ recommendations for statistics education, highlighting best practices and opportunities for pedagogical growth. 
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](ClassroomObservation.pdf)**
+
+```{=html}
+<iframe src="ClassroomObservation.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+
+
+
+
+

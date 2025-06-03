@@ -340,7 +340,7 @@
     "href": "course_projects.html",
     "title": "Course Projects",
     "section": "",
-    "text": "This section showcases a range of projects completed throughout my undergraduate and graduate coursework in statistics, data science, and computer science. Each post corresponds to a specific course and highlights hands-on work applying analytical methods, computational tools, and statistical theory to real-world data problems.\nProjects span topics such as machine learning, generalized linear models, survival analysis, experimental design, stochastic processes, distributed computing, and statistics education. Whether developing predictive models, analyzing sequential processes, or building interactive reports, each project reflects the applied and interdisciplinary focus of my academic experience.\nClick any course below to explore the work in more detail.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDATA 403: Data Science Projects Laboratory\n\n\n\nData Science\n\n\nPython\n\n\nR\n\n\n\nProjects involving comparison of predictive and interpretable regression models, implementing linear classifiers with gradient descent, implementing neural networks from…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSC 466: Knowledge Discovery from Data\n\n\n\nComputer Science\n\n\nPython\n\n\n\nOverview of modern knowledge discovery from data (KDD) methods and technologies. Topics in data mining (association rules mining, classification, clustering), information…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 423: Design and Analysis of Experiments II\n\n\n\nStatistics\n\n\nJMP\n\n\n\n2k factorial designs, 3k factorial designs, balanced and partially balanced incomplete block designs, nested designs, split-plot designs, response surface methodology…\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 417: Survival Analysis Methods\n\n\n\nStatistics\n\n\nMinitab\n\n\n\nParametric and nonparametric methods for analyzing survival data. Topics include Kaplan-Meier and Nelson-Aalen estimates, Cox regression models, accelerated failure time…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDATA 301: Introduction to Data Science\n\n\n\nData Science\n\n\nPython\n\n\n\nIntroduction to the field of data science and the workflow of a data scientist. Types of data (tabular, textual, sparse, structured, temporal, geospatial), basic data…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 365: Statistical Communication\n\n\n\nStatistics\n\n\nR\n\n\nExcel\n\n\n\nWritten communication of statistical ideas and content. Analyze data using appropriate methods from previous statistics courses. Writing technical reports with appropriate…\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 334: Applied Linear Models\n\n\n\nStatistics\n\n\nR\n\n\n\nLinear models in algebraic and matrix form, diagnostics, transformations, polynomial models, categorical predictors, model selection, correlated errors, logistic regression.\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 323: Design and Analysis of Experiments I\n\n\n\nStatistics\n\n\nJMP\n\n\n\nPrinciples, construction and analysis of experimental designs. Completely randomized, randomized complete block, Latin squares, Graeco Latin squares, factorial, and nested…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This section showcases a range of projects completed throughout my undergraduate and graduate coursework in statistics, data science, and computer science. Each post corresponds to a specific course and highlights hands-on work applying analytical methods, computational tools, and statistical theory to real-world data problems.\nProjects span topics such as machine learning, generalized linear models, survival analysis, experimental design, stochastic processes, distributed computing, and statistics education. Whether developing predictive models, analyzing sequential processes, or building interactive reports, each project reflects the applied and interdisciplinary focus of my academic experience.\nClick any course below to explore the work in more detail.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 545: Applied Stochastic Processes\n\n\n\nStatistics\n\n\nR\n\n\n\nProperties, simulation, and application of stochastic processes. Discrete-time and continuous-time Markov chains, hidden Markov models, Poisson processes, Gaussian…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 550: Generalized Linear Models\n\n\n\nStatistics\n\n\nR\n\n\n\nTheory and application of linear and generalized linear models (GLMs). Logistic regression, nominal and ordinal responses, Poisson GLMs, correlated responses, random and…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 551: Statistical Learning with R\n\n\n\nStatistics\n\n\nR\n\n\n\nIntroduction to distributed computing paradigms and cloud computing. Modern distributed computing infrastructures. Problem-solving in a distributed computing environment.\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSC 369: Introduction to Distributed Computing\n\n\n\nComputer Science\n\n\nScala\n\n\nApache Spark\n\n\n\nIntroduction to distributed computing paradigms and cloud computing. Modern distributed computing infrastructures. Problem-solving in a distributed computing environment.\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 410: Statistics Education: Pedagogy, Content, Technology, and Assessment\n\n\n\nStatistics\n\n\n\nTopics related to content, pedagogy, technology, and assessment for teaching statistics in grades 6-16 in accordance with current standards and research for teaching…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDATA 403: Data Science Projects Laboratory\n\n\n\nData Science\n\n\nPython\n\n\nR\n\n\n\nProjects involving comparison of predictive and interpretable regression models, implementing linear classifiers with gradient descent, implementing neural networks from…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSC 466: Knowledge Discovery from Data\n\n\n\nComputer Science\n\n\nPython\n\n\n\nOverview of modern knowledge discovery from data (KDD) methods and technologies. Topics in data mining (association rules mining, classification, clustering), information…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 423: Design and Analysis of Experiments II\n\n\n\nStatistics\n\n\nJMP\n\n\n\n2k factorial designs, 3k factorial designs, balanced and partially balanced incomplete block designs, nested designs, split-plot designs, response surface methodology…\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 417: Survival Analysis Methods\n\n\n\nStatistics\n\n\nMinitab\n\n\n\nParametric and nonparametric methods for analyzing survival data. Topics include Kaplan-Meier and Nelson-Aalen estimates, Cox regression models, accelerated failure time…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDATA 301: Introduction to Data Science\n\n\n\nData Science\n\n\nPython\n\n\n\nIntroduction to the field of data science and the workflow of a data scientist. Types of data (tabular, textual, sparse, structured, temporal, geospatial), basic data…\n\n\n\nRachel Roggenkemper\n\n\nSep 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 365: Statistical Communication\n\n\n\nStatistics\n\n\nR\n\n\nExcel\n\n\n\nWritten communication of statistical ideas and content. Analyze data using appropriate methods from previous statistics courses. Writing technical reports with appropriate…\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 334: Applied Linear Models\n\n\n\nStatistics\n\n\nR\n\n\n\nLinear models in algebraic and matrix form, diagnostics, transformations, polynomial models, categorical predictors, model selection, correlated errors, logistic regression.\n\n\n\nRachel Roggenkemper\n\n\nApr 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSTAT 323: Design and Analysis of Experiments I\n\n\n\nStatistics\n\n\nJMP\n\n\n\nPrinciples, construction and analysis of experimental designs. Completely randomized, randomized complete block, Latin squares, Graeco Latin squares, factorial, and nested…\n\n\n\nRachel Roggenkemper\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "course_projects/2022-09-01-data301/index.html",
@@ -425,5 +425,110 @@
     "title": "STAT 334: Applied Linear Models",
     "section": "",
     "text": "This was my final project for this course, where my team developed a multiple linear regression model to investigate the key predictors of home sale prices in San Luis Obispo. We manually collected data on 144 recently sold properties and examined a variety of numerical and categorical variables, including square footage, lot size, and home type. After variable selection, data transformation, and model diagnostics, we identified square footage, lot size, and home type as the most significant predictors.\nOur professor, Dr. Bret Holladay, was so impressed with our work that he asked to use it as a sample project for future STAT 334 courses. To this day, it continues to be shared as an example of an outstanding final report.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-01-01-stat410/index.html#book-presentation",
+    "href": "course_projects/2024-01-01-stat410/index.html#book-presentation",
+    "title": "STAT 410: Statistics Education: Pedagogy, Content, Technology, and Assessment",
+    "section": "Book Presentation",
+    "text": "Book Presentation\nI led a presentation based on Developing Essential Understandings of Statistics: Grades 6–8, focusing on how students build understanding of sample, population, and sampling distributions. We created activities and examples, including one set in the world of The Hunger Games, to explore how inferential statistics link sample data to population insights. We also emphasized the distinction between different types of distributions and facilitated knowledge checks to reinforce these concepts.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-01-01-stat410/index.html#classroom-observation",
+    "href": "course_projects/2024-01-01-stat410/index.html#classroom-observation",
+    "title": "STAT 410: Statistics Education: Pedagogy, Content, Technology, and Assessment",
+    "section": "Classroom Observation",
+    "text": "Classroom Observation\nI observed an undergraduate introductory statistics course (STAT 217 at Cal Poly) to analyze pedagogical practices in action. The observed lesson focused on confidence intervals and hypothesis testing, with an emphasis on interpretation over computation. I noted the instructor’s use of collaborative group work, real-world examples, and context-driven teaching. The experience was evaluated in light of both the GAISE Report’s learning goals and Jessica Utts’ recommendations for statistics education, highlighting best practices and opportunities for pedagogical growth.\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-01-01-stat410/index.html",
+    "href": "course_projects/2024-01-01-stat410/index.html",
+    "title": "STAT 410: Statistics Education: Pedagogy, Content, Technology, and Assessment",
+    "section": "",
+    "text": "As part of a team, I developed and taught an introductory probability lesson tailored for a 7th-grade math class. This lesson was designed around Common Core Standard 7.SP.C.5 and emphasized conceptual understanding through interactive group activities, ranking exercises, and guided practice on probability scenarios. Special focus was placed on addressing student misconceptions such as equiprobability and ratio misinterpretation, grounded in research by Shaughnessy. The project included a detailed lesson plan, a classroom-ready slide presentation, a student worksheet, and corresponding solution key.\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-01-01-stat410/index.html#lesson-plan-project",
+    "href": "course_projects/2024-01-01-stat410/index.html#lesson-plan-project",
+    "title": "STAT 410: Statistics Education: Pedagogy, Content, Technology, and Assessment",
+    "section": "",
+    "text": "As part of a team, I developed and taught an introductory probability lesson tailored for a 7th-grade math class. This lesson was designed around Common Core Standard 7.SP.C.5 and emphasized conceptual understanding through interactive group activities, ranking exercises, and guided practice on probability scenarios. Special focus was placed on addressing student misconceptions such as equiprobability and ratio misinterpretation, grounded in research by Shaughnessy. The project included a detailed lesson plan, a classroom-ready slide presentation, a student worksheet, and corresponding solution key.\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF\n\n\n\n\n\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-09-01-csc369/index.html",
+    "href": "course_projects/2024-09-01-csc369/index.html",
+    "title": "CSC 369: Introduction to Distributed Computing",
+    "section": "",
+    "text": "For my final project in this course, my team and I developed a machine learning model to predict whether a Formula 1 driver would finish in the points (i.e., place in the top 10) using a K-Nearest Neighbors (KNN) classification algorithm. We implemented the project in Scala using Apache Spark, applying distributed computing techniques to handle an extensive dataset sourced from Kaggle. By joining six different tables—ranging from race results to pit stop data—we created a unified, feature-rich dataset. After filtering for races post-2010 (to reflect the modern point system), we engineered new variables, standardized numeric data, and converted categorical fields into dummy variables. Our final model achieved a classification accuracy of 74.3%, with strong recall (93.6%), highlighting its ability to correctly identify top finishes. This project provided valuable experience in both distributed data processing and the application of KNN in sports analytics."
+  },
+  {
+    "objectID": "course_projects/2024-09-01-csc369/index.html#presentation-slides",
+    "href": "course_projects/2024-09-01-csc369/index.html#presentation-slides",
+    "title": "CSC 369: Introduction to Distributed Computing",
+    "section": "Presentation Slides",
+    "text": "Presentation Slides\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-09-01-csc369/index.html#report",
+    "href": "course_projects/2024-09-01-csc369/index.html#report",
+    "title": "CSC 369: Introduction to Distributed Computing",
+    "section": "Report",
+    "text": "Report\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-09-01-stat551/index.html",
+    "href": "course_projects/2024-09-01-stat551/index.html",
+    "title": "STAT 551: Statistical Learning with R",
+    "section": "",
+    "text": "For our final project in STAT 551, my team partnered with the American College of Cardiology to build a predictive tool aimed at improving diagnostic consistency for diabetes and cardiovascular disease. Using real patient datasets from a multispecialty hospital in India, the CDC, and Sylhet Diabetes Hospital in Bangladesh, we developed machine learning models to identify high-risk patients across diverse populations. Our primary focus was not only on predictive performance but also on ensuring equitable outcomes for male and female patients—an important consideration in light of documented diagnostic disparities.\nWe began with exploratory analysis to understand gender imbalances and relationships between key clinical variables and diagnoses. Our models included logistic regression with LASSO regularization, support vector machines, and k-nearest neighbors. We evaluated model performance with ROC-AUC, sensitivity, and confusion matrices, prioritizing both accuracy and fairness. Ultimately, our approach demonstrated high sensitivity and strong predictive power, especially on the cardiovascular and early-stage diabetes datasets. The final deliverables included a comprehensive report, poster, and reflections, all highlighting the potential of data science to support fair and early medical intervention."
+  },
+  {
+    "objectID": "course_projects/2024-09-01-stat551/index.html#project-proposal",
+    "href": "course_projects/2024-09-01-stat551/index.html#project-proposal",
+    "title": "STAT 551: Statistical Learning with R",
+    "section": "Project Proposal",
+    "text": "Project Proposal\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-09-01-stat551/index.html#poster",
+    "href": "course_projects/2024-09-01-stat551/index.html#poster",
+    "title": "STAT 551: Statistical Learning with R",
+    "section": "Poster",
+    "text": "Poster\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2024-09-01-stat551/index.html#reflection",
+    "href": "course_projects/2024-09-01-stat551/index.html#reflection",
+    "title": "STAT 551: Statistical Learning with R",
+    "section": "Reflection",
+    "text": "Reflection\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2025-01-01-stat550/index.html",
+    "href": "course_projects/2025-01-01-stat550/index.html",
+    "title": "STAT 550: Generalized Linear Models",
+    "section": "",
+    "text": "For my final project in this course, I investigated the drivers of customer foot traffic to a retail store using generalized linear models (GLMs). Starting with a Poisson regression, I identified significant overdispersion and transitioned to a negative binomial model with a log link. Through stepwise model selection guided by BIC, I built a parsimonious model incorporating centered predictors: units, income, competitor distance, and store distance. Model diagnostics confirmed a good fit, with no influential outliers and strong interpretability. I also generated predicted counts for all combinations of predictor values to demonstrate practical implications. This project emphasized rigorous model diagnostics, variable selection, and interpretation in a real-world context."
+  },
+  {
+    "objectID": "course_projects/2025-01-01-stat550/index.html#project-report",
+    "href": "course_projects/2025-01-01-stat550/index.html#project-report",
+    "title": "STAT 550: Generalized Linear Models",
+    "section": "Project Report",
+    "text": "Project Report\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2025-01-01-stat550/index.html#project-log",
+    "href": "course_projects/2025-01-01-stat550/index.html#project-log",
+    "title": "STAT 550: Generalized Linear Models",
+    "section": "Project Log",
+    "text": "Project Log\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
+  },
+  {
+    "objectID": "course_projects/2025-01-01-stat550/index.html#appendix",
+    "href": "course_projects/2025-01-01-stat550/index.html#appendix",
+    "title": "STAT 550: Generalized Linear Models",
+    "section": "Appendix",
+    "text": "Appendix\nNote: PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:\n\nOpening this page in Safari or Firefox, or\nClick here to download the PDF"
   }
 ]

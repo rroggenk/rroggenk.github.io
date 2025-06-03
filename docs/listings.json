@@ -15,6 +15,11 @@
   {
     "listing": "/course_projects.html",
     "items": [
+      "/course_projects/2025-01-01-stat545/index.html",
+      "/course_projects/2025-01-01-stat550/index.html",
+      "/course_projects/2024-09-01-stat551/index.html",
+      "/course_projects/2024-09-01-csc369/index.html",
+      "/course_projects/2024-01-01-stat410/index.html",
       "/course_projects/2023-09-01-data403/index.html",
       "/course_projects/2023-09-01-csc466/index.html",
       "/course_projects/2023-04-01-stat423/index.html",

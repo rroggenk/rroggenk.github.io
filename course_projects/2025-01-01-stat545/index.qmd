@@ -1,0 +1,28 @@
+---
+title: "STAT 545: Applied Stochastic Processes"
+description: "Properties, simulation, and application of stochastic processes. Discrete-time and continuous-time Markov chains, hidden Markov models, Poisson processes, Gaussian processes, continuous-state Markov processes. Markov chain Monte Carlo (MCMC) simulation methods and applications. Estimation methods for stochastic processes."
+author: "Rachel Roggenkemper"
+date: "01-01-2025"
+categories: [Statistics, R]
+image: preview-image.jpg
+format: html
+embed-resources: true
+# resources: 
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+
+
+
+<!-- **Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try: -->
+
+<!-- - Opening this page in **Safari** or **Firefox**, or   -->
+
+<!-- - **[Click here to download the PDF](project_proposal.pdf)** -->
+
+<!-- ```{=html} -->
+<!-- <iframe src="project_proposal.pdf" width="100%" height="800px" style="border: none;"></iframe> -->
+<!-- ``` -->

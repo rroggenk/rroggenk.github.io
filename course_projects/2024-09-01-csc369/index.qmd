@@ -1,0 +1,54 @@
+---
+title: "CSC 369: Introduction to Distributed Computing"
+description: "Introduction to distributed computing paradigms and cloud computing. Modern distributed computing infrastructures. Problem-solving in a distributed computing environment."
+author: "Rachel Roggenkemper"
+date: "09-01-2024"
+categories: [Computer Science, Scala, Apache Spark]
+image: preview-image.png
+format: html
+embed-resources: true
+resources: 
+  - CSC 369 Final Project Presentation.pdf
+  - CSC 369 Final Project Report.pdf
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+For my final project in this course, my team and I developed a machine learning model to predict whether a Formula 1 driver would finish in the points (i.e., place in the top 10) using a K-Nearest Neighbors (KNN) classification algorithm. We implemented the project in Scala using Apache Spark, applying distributed computing techniques to handle an extensive dataset sourced from Kaggle. By joining six different tables—ranging from race results to pit stop data—we created a unified, feature-rich dataset. After filtering for races post-2010 (to reflect the modern point system), we engineered new variables, standardized numeric data, and converted categorical fields into dummy variables. Our final model achieved a classification accuracy of 74.3%, with strong recall (93.6%), highlighting its ability to correctly identify top finishes. This project provided valuable experience in both distributed data processing and the application of KNN in sports analytics.
+
+
+## Presentation Slides 
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](CSC 369 Final Project Presentation.pdf)**
+
+```{=html}
+<iframe src="CSC 369 Final Project Presentation.pdf" width="100%" height="600px" style="border: none;"></iframe>
+```
+
+
+## Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](CSC 369 Final Project Report.pdf)**
+
+```{=html}
+<iframe src="CSC 369 Final Project Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+---
+title: "STAT 550: Generalized Linear Models"
+description: "Theory and application of linear and generalized linear models (GLMs). Logistic regression, nominal and ordinal responses, Poisson GLMs, correlated responses, random and mixed effects models, Bayesian GLMs, model selection and model checking."
+author: "Rachel Roggenkemper"
+date: "01-01-2025"
+categories: [Statistics, R]
+image: preview-image.png
+format: html
+embed-resources: true
+resources: 
+  - Project Log.pdf
+  - Project Report.pdf
+editor: source
+execute: 
+  echo: true
+  warning: false
+---
+
+For my final project in this course, I investigated the drivers of customer foot traffic to a retail store using generalized linear models (GLMs). Starting with a Poisson regression, I identified significant overdispersion and transitioned to a negative binomial model with a log link. Through stepwise model selection guided by BIC, I built a parsimonious model incorporating centered predictors: units, income, competitor distance, and store distance. Model diagnostics confirmed a good fit, with no influential outliers and strong interpretability. I also generated predicted counts for all combinations of predictor values to demonstrate practical implications. This project emphasized rigorous model diagnostics, variable selection, and interpretation in a real-world context.
+
+
+## Project Report
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project Report.pdf)**
+
+```{=html}
+<iframe src="Project Report.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
+
+## Project Log
+
+**Note:** PDF previews may not display in some browsers (especially Chrome). If the PDF viewer does not appear below, please try:
+
+- Opening this page in **Safari** or **Firefox**, or  
+
+- **[Click here to download the PDF](Project Log.pdf)**
+
+```{=html}
+<iframe src="Project Log.pdf" width="100%" height="800px" style="border: none;"></iframe>
+```
+
+
